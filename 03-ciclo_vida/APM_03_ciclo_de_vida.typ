@@ -137,9 +137,21 @@ Las apps Android se construyen a partir de 4 tipos de *componentes*:
   [`ContentProvider`], [Gestiona y comparte datos entre apps (contactos, fotos...) mediante una interfaz URI.],
 )
 
-#v(0.5em)
+---
 
-En esta asignatura nos centraremos especialmente en las *Activities*.
+== Comunicación entre Componentes: Intents
+
+- Los componentes de Android se comunican mediante *Intents*: mensajes asíncronos que solicitan a un componente que realice una acción.
+
+- Un Intent puede transportar *datos* (texto, URIs, extras...).
+
+- Activities, Services y BroadcastReceivers se activan mediante Intents.
+
+- Excepción: los *ContentProviders* no se activan con Intents, sino a través de un `ContentResolver`.
+
+#v(1em)
+
+Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `ACTION_SEND` y el texto a compartir. Android busca las apps que declaren saber manejar esa acción y muestra el menú de selección.
 
 ---
 
@@ -147,16 +159,11 @@ En esta asignatura nos centraremos especialmente en las *Activities*.
 
 - Una *Activity* es el componente que representa una *única pantalla* con interfaz de usuario.
 
-- Una app puede tener *múltiples Activities*, cada una correspondiente a una pantalla distinta.
+- En móvil, la interacción del usuario *no siempre empieza en el mismo sitio*. Ej: puedes abrir la app de email desde el launcher y ver la bandeja de entrada, o desde otra app y ir directamente a redactar un correo.
 
-- Ejemplo: una app de email puede tener:
-  - Una Activity para la *bandeja de entrada*.
-  - Una Activity para *redactar* un correo.
-  - Una Activity para *leer* un correo.
+- Una app puede tener *múltiples Activities*, cada una correspondiente a una pantalla distinta. Ej: una app de email puede tener: bandeja de entrada, redactar correo, y leer correo.
 
-- Una Activity puede ser iniciada por otras apps (ej: al seleccionar una foto, al compartir contenido...).
-
-- La clase base en Android con Jetpack Compose es `ComponentActivity`.
+- Cuando una app invoca a otra, *invoca una Activity concreta*, no la app como un todo. La Activity es el *punto de entrada* para la interacción con el usuario.
 
 ---
 
