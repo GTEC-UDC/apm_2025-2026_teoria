@@ -275,8 +275,8 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
   [
     El enum `Lifecycle.State` define los siguientes estados:
 
-    - *Initialized:* la Activity se ha instanciado pero aún no se ha inicializado.
-    - *Created:* la Activity se ha creado en memoria (`onCreate()` ejecutado).
+    - *Initialized:* el objeto Activity se ha creado en memoria, pero `onCreate()` aún no se ha ejecutado.
+    - *Created:* la Activity se considera creada (`onCreate()` ejecutado).
     - *Started:* la Activity es visible en pantalla.
     - *Resumed:* la Activity tiene el foco y el usuario puede interactuar.
     - *Destroyed:* la Activity se ha eliminado de memoria.
