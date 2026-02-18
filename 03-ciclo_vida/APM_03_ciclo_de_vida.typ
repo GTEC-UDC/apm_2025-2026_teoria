@@ -61,6 +61,28 @@
 )
 
 
+#slide(
+  config: ty.config-page(
+    margin: (top: 1.5em, bottom: 1.5em),
+    header: none,
+    footer: none,
+  ),
+)[
+  #set text(size: 1.2em)
+  Esta presentación reproduce y adapta material creado y compartido por el Android Open Source Project, utilizado según los términos de la licencia Creative Commons Attribution 2.5.
+
+  #v(2em)
+
+  #align(center)[
+    #link("https://creativecommons.org/licenses/by/2.5/")[
+      #image("images/cc-by.svg", height: 58pt)
+    ]
+  ]
+]
+
+
+---
+
 #outline-slide(
   title: [Contenidos],
   outline-args: (depth: 1),
@@ -749,7 +771,7 @@ onResume Called
         square(
           size: 20pt,
           stroke: 3pt + red.darken(20%),
-          radius: 3pt
+          radius: 3pt,
         ),
       )
     ],
