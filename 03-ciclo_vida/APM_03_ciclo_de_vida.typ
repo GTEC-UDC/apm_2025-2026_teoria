@@ -187,6 +187,8 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 
 - Cuando una app invoca a otra, *invoca una Activity concreta*, no la app como un todo. La Activity es el *punto de entrada* para la interacción con el usuario.
 
+*Nota:* aunque tradicionalmente cada Activity representaba una pantalla, actualmente las aplicaciones pueden usar *una sola Activity* que gestiona múltiples pantallas.
+
 ---
 
 == El `AndroidManifest.xml`
