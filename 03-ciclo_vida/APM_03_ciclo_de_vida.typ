@@ -69,12 +69,16 @@
   ),
 )[
   #set text(size: 1.2em)
+  Esta presentación está licenciada bajo Creative Commons Attribution 4.0.
+
+  #v(0.8em)
+
   Esta presentación reproduce y adapta material creado y compartido por el Android Open Source Project, utilizado según los términos de la licencia Creative Commons Attribution 2.5.
 
-  #v(2em)
+  #v(1.5em)
 
   #align(center)[
-    #link("https://creativecommons.org/licenses/by/2.5/")[
+    #link("https://creativecommons.org/licenses/by/4.0/")[
       #image("images/cc-by.svg", height: 58pt)
     ]
   ]
