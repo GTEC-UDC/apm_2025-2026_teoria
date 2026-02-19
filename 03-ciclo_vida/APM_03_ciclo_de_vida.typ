@@ -320,35 +320,6 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 
 ---
 
-== Estados Paused y Stopped
-
-#grid(
-  columns: (1fr, 35%),
-  column-gutter: 1em,
-  [
-    #set text(size: 0.85em)
-    - La documentación clásica de Android también describe los estados *Paused* y *Stopped*:
-      - *Paused:* la Activity pierde el foco pero puede seguir parcialmente visible (ej: diálogo encima).
-      - *Stopped:* la Activity ya no es visible, pero el objeto sigue en memoria.
-
-    - Sin embargo, el enum `Lifecycle.State` *no tiene valores* para estos estados. En su lugar, los mapea a estados existentes:
-
-    #align(center)[
-      #table(
-        columns: (auto, auto, auto),
-        inset: 8pt,
-        align: (left, left, left),
-        table.header([*Estado conceptual*], [*`Lifecycle.State`*], [*Callback*]),
-        [Paused], [`STARTED`], [`onPause()`],
-        [Stopped], [`CREATED`], [`onStop()`],
-      )
-    ]
-
-    - Es decir: cuando `onPause()` se ejecuta, el `Lifecycle.State` vuelve a `STARTED`. Cuando `onStop()` se ejecuta, vuelve a `CREATED`.
-  ],
-  image("images/activity_lifecycle_states.png", width: 100%, fit: "contain"),
-)
-
 == `onCreate()`
 
 #grid(
@@ -594,80 +565,7 @@ class MainActivity : ComponentActivity() {
 
 
 // ============================================================================
-// SECCIÓN 4: LOGGING CON LOGCAT
-// ============================================================================
-
-= Logging con Logcat
-
-== La Clase `Log`
-
-- Android proporciona la clase `Log` para escribir mensajes de depuración.
-
-- Cada mensaje tiene: *prioridad*, *tag* y *mensaje*.
-
-#v(0.5em)
-
-#align(center)[
-  #table(
-    columns: (auto, auto, auto),
-    inset: 8pt,
-    align: (left, left, left),
-    table.header([*Método*], [*Prioridad*], [*Uso*]),
-    [`Log.v(tag, msg)`], [Verbose], [Mensajes muy detallados],
-    [`Log.d(tag, msg)`], [Debug], [Mensajes de depuración],
-    [`Log.i(tag, msg)`], [Info], [Mensajes informativos],
-    [`Log.w(tag, msg)`], [Warning], [Advertencias],
-    [`Log.e(tag, msg)`], [Error], [Errores],
-  )
-]
-
-#v(0.5em)
-
-- El *tag* es una cadena que identifica el origen del mensaje (típicamente, el nombre de la clase).
-
----
-
-== Logcat en Android Studio
-
-- *Logcat* es la consola de Android Studio donde aparecen los mensajes de log.
-
-- Se encuentra en la parte inferior del IDE.
-
-- Permite *filtrar* y *buscar* mensajes:
-  - Filtrar por tag: `tag:MainActivity`
-  - Filtrar por paquete de la app.
-  - Filtrar por nivel de prioridad.
-
-- Ejemplo de salida en Logcat:
-
-#[
-  #set text(size: 0.85em)
-  ```
-  2025-02-10 14:56:48.684  5484-5484  MainActivity  com.example.app  D  onCreate Called
-  2025-02-10 14:56:48.710  5484-5484  MainActivity  com.example.app  D  onStart Called
-  2025-02-10 14:56:48.713  5484-5484  MainActivity  com.example.app  D  onResume Called
-  ```
-]
-
-== Buenas Prácticas de Logging
-
-- Definir el *tag* como una constante a nivel de fichero:
-
-```kotlin
-private const val TAG = "MainActivity"
-```
-
-- Usar `Log.d()` para mensajes de depuración durante el desarrollo.
-
-- Usar `Log.e()` para errores que necesitan atención.
-
-- *No dejar logs de depuración en producción*: pueden afectar al rendimiento y exponer información sensible.
-
-- Añadir mensajes de log en los callbacks del ciclo de vida es una técnica fundamental para entender el comportamiento de la app.
-
-
-// ============================================================================
-// SECCIÓN 5: ESCENARIOS DEL CICLO DE VIDA
+// SECCIÓN 4: ESCENARIOS DEL CICLO DE VIDA
 // ============================================================================
 
 = Escenarios del Ciclo de Vida
