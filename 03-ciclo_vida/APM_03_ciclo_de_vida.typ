@@ -243,10 +243,16 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 
 - El *ciclo de vida* (_lifecycle_) es el conjunto de estados por los que transita una Activity desde su creación hasta su destrucción.
 
-- Comprender el ciclo de vida es fundamental para:
-  - Evitar *bugs* y comportamientos inesperados.
-  - Gestionar *recursos* correctamente (cámara, sensores, red...).
-  - Preservar el *estado* de la aplicación ante cambios de configuración.
+- Las aplicaciones usan *callbacks* del ciclo de vida para gestionar recursos (cámara, sensores, red...) y pausar o reanudar operaciones según la Activity gane o pierda visibilidad.
+
+#block(
+  fill: black.lighten(95%),
+  radius: 5pt,
+  width: 100%,
+  inset: 12pt,
+)[
+  *Nota:* el ciclo de vida de una Activity es independiente del ciclo de vida de la aplicación/proceso. Destruir una Activity no implica destruir la aplicación.
+]
 
 ---
 
@@ -305,7 +311,7 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 
     - *Initialized:* el objeto Activity se ha creado en memoria, pero `onCreate()` aún no se ha ejecutado.
     - *Created:* la Activity se considera creada (`onCreate()` ejecutado).
-    - *Started:* la Activity es visible en pantalla.
+    - *Started:* la Activity es visible en pantalla pero no tiene el foco.
     - *Resumed:* la Activity tiene el foco y el usuario puede interactuar.
     - *Destroyed:* la Activity se ha eliminado de memoria.
   ],
@@ -372,8 +378,8 @@ class MainActivity : ComponentActivity() {
 
         // Establecer la interfaz de usuario con Compose
         setContent {
-            DessertClickerTheme {
-                DessertClickerApp()
+            MyAppTheme {
+                MyApp()
             }
         }
     }
@@ -492,13 +498,15 @@ class MainActivity : ComponentActivity() {
   columns: (1fr, 45%),
   column-gutter: 1em,
   [
+    #set text(size: 0.9em)
+
     - Se ejecuta *justo antes* de que la Activity sea destruida.
 
     - Se llama cuando:
-      - El usuario pulsa el botón *Atrás* (o desliza).
+      - El usuario pulsa el botón *Atrás* _(en Android < 12)_.
       - Se llama a `finish()` desde el código.
       - El sistema destruye la Activity por un *cambio de configuración* (ej: rotación).
-      - El sistema destruye la Activity por *falta de recursos*.
+      - El *sistema decide destruir* la Activity (por falta de recursos, ahorro de batería, tiempo prolongado en segundo plano, etc.).
 
     - Es el lugar para liberar todos los recursos restantes.
 
@@ -548,7 +556,7 @@ class MainActivity : ComponentActivity() {
       override fun onCreate(savedInstanceState: Bundle?) {
           super.onCreate(savedInstanceState)
           Log.d(TAG, "onCreate Called")
-          setContent { DessertClickerApp() }
+          setContent { MyApp() }
       }
 
       override fun onStart() {
@@ -689,20 +697,27 @@ private const val TAG = "MainActivity"
 
 == Escenario 1: Log
 
-```
-// Al abrir la app:
-onCreate Called
-onStart Called
-onResume Called
+#grid(
+  columns: (1fr, 45%),
+  column-gutter: 1em,
+  [
+    ```
+    // Al abrir la app:
+    onCreate Called
+    onStart Called
+    onResume Called
 
-// Al pulsar Atrás:
-onPause Called
-onStop Called
-onDestroy Called
-```
+    // Al pulsar Atrás:
+    onPause Called
+    onStop Called
+    onDestroy Called
+    ```
 
-- La Activity se crea con `onCreate()` y se destruye con `onDestroy()`.
-- Este par de callbacks solo se ejecuta *una vez* por instancia de la Activity (salvo cambios de configuración).
+    - La Activity se crea con `onCreate()` y se destruye con `onDestroy()`.
+    - Este par de callbacks solo se ejecuta *una vez* por instancia de la Activity (salvo cambios de configuración).
+  ],
+  image("images/lifecycle_callbacks.png", width: 100%, fit: "contain"),
+)
 
 == Escenario 2: Ir a Home y Volver
 
@@ -729,24 +744,34 @@ onDestroy Called
 
 == Escenario 2: Log
 
-```
-// Al abrir la app:
-onCreate Called
-onStart Called
-onResume Called
+#grid(
+  columns: (1fr, 45%),
+  column-gutter: 1em,
+  [
+    #set text(size: 0.95em)
 
-// Al pulsar Home:
-onPause Called
-onStop Called
+    ```
+    // Al abrir la app:
+    onCreate Called
+    onStart Called
+    onResume Called
 
-// Al volver desde Recientes:
-onRestart Called
-onStart Called
-onResume Called
-```
+    // Al pulsar Home:
+    onPause Called
+    onStop Called
 
-- `onCreate()` *no se vuelve a llamar*: la Activity no se destruyó, solo se detuvo.
-- `onRestart()` se llama porque la Activity viene de `onStop()`.
+    // Al volver desde Recientes:
+    onRestart Called
+    onStart Called
+    onResume Called
+    ```
+
+    - `onCreate()` *no se vuelve a llamar*: la Activity no se destruyó, solo se detuvo.
+    - `onRestart()` se llama porque la Activity viene de `onStop()`.
+  ],
+  image("images/onstop_lifecycle.png", width: 100%, fit: "contain"),
+)
+
 
 == Escenario 3: Activity Parcialmente Oculta
 
@@ -857,7 +882,7 @@ onResume Called
     + `onDestroy()`
 
     *Se crea una nueva Activity:*
-    + `onCreate()` #sym.arrow se llama a `onCreate()`, *no* a `onRestart()`
+    + `onCreate()`
     + `onStart()`
     + `onResume()`
 
@@ -879,15 +904,15 @@ onResume Called
 // Se rota el dispositivo:
 onPause Called
 onStop Called
-onDestroy Called
-onCreate Called    // Nueva instancia, no onRestart
+onDestroy Called   // Instancia destruida
+onCreate Called    // Nueva instancia
 onStart Called
 onResume Called
 ```
 
 - La Activity se destruye por completo y se crea una nueva.
 - Todas las variables se reinicializan a sus valores por defecto.
-- Ejemplo: los contadores de la app "Dessert Clicker" se resetean a 0.
+- Ejemplo: si la app tiene un contador, este vuelve a 0.
 
 
 // ============================================================================
@@ -902,10 +927,6 @@ onResume Called
   - Variables locales se reinicializan.
   - Contadores vuelven a 0.
   - Datos del usuario desaparecen.
-
-- Ejemplo con la app "Dessert Clicker":
-  - El usuario ha comprado 5 postres (total: \$50).
-  - Al rotar el dispositivo, el contador vuelve a 0 y el total a \$0.
 
 - Este es un *bug común* en aplicaciones Android que no gestionan correctamente el estado.
 
@@ -928,9 +949,9 @@ onResume Called
     align: (left, left, left),
     table.header([*Declaración*], [*Recomposición*], [*Cambio de config.*]),
     [`var x = 0`], [Se pierde], [Se pierde],
-    [`mutableStateOf(0)`], [Se pierde], [Se pierde],
-    [`remember { mutableStateOf(0) }`], [*Se mantiene*], [Se pierde],
-    [`rememberSaveable { mutableStateOf(0) }`], [*Se mantiene*], [*Se mantiene*],
+    [`var x by mutableStateOf(0)`], [Se pierde], [Se pierde],
+    [`var x by remember { mutableStateOf(0) }`], [*Se mantiene*], [Se pierde],
+    [`var x by rememberSaveable { mutableStateOf(0) }`], [*Se mantiene*], [*Se mantiene*],
   )
 ]
 
@@ -956,27 +977,6 @@ var revenue by rememberSaveable { mutableStateOf(0) }
 
 ---
 
-== Ejemplo: Corrigiendo Dessert Clicker
-
-*Antes (estado se pierde al rotar):*
-
-```kotlin
-var revenue by remember { mutableStateOf(0) }
-var dessertsSold by remember { mutableStateOf(0) }
-var currentDessertIndex by remember { mutableStateOf(0) }
-```
-
-*Después (estado se mantiene al rotar):*
-
-```kotlin
-var revenue by rememberSaveable { mutableStateOf(0) }
-var dessertsSold by rememberSaveable { mutableStateOf(0) }
-var currentDessertIndex by rememberSaveable { mutableStateOf(0) }
-```
-
-- Solo cambia `remember` por `rememberSaveable`.
-- El sistema se encarga de guardar y restaurar los valores automáticamente.
-
 == Muerte del Proceso
 
 - El sistema Android puede *matar el proceso* de una app en segundo plano si necesita liberar recursos.
@@ -998,7 +998,7 @@ var currentDessertIndex by rememberSaveable { mutableStateOf(0) }
 // SECCIÓN 8: MEJORES PRÁCTICAS
 // ============================================================================
 
-= Mejores Prácticas
+= Resumen
 
 == Resumen de Callbacks y su Uso
 
@@ -1082,92 +1082,12 @@ var currentDessertIndex by rememberSaveable { mutableStateOf(0) }
 
 
 // ============================================================================
-// SECCIÓN 9: ACTIVIDAD A → ACTIVIDAD B
-// ============================================================================
-
-= Transiciones entre Activities
-
-== Iniciar otra Activity
-
-#[
-  #set text(size: 0.95em)
-
-  - Cuando la Activity A inicia la Activity B, la secuencia de callbacks es:
-
-    + `onPause()` de la Activity A
-    + `onCreate()` de la Activity B
-    + `onStart()` de la Activity B
-    + `onResume()` de la Activity B #sym.arrow B tiene el foco
-    + `onStop()` de la Activity A (si A ya no es visible)
-
-  - La Activity A *no se detiene hasta que B esté completamente iniciada*.
-
-  - Si el usuario vuelve a A (pulsando Atrás):
-    + `onPause()` de B
-    + `onRestart()` de A
-    + `onStart()` de A
-    + `onResume()` de A
-    + `onStop()` de B
-    + `onDestroy()` de B
-]
-
-// ============================================================================
 // APÉNDICE
 // ============================================================================
 
 #show: ty.appendix
 
 = Apéndice
-
-== `onSaveInstanceState()` (Enfoque Tradicional)
-
-- Antes de Compose, el mecanismo principal para guardar estado era `onSaveInstanceState()`:
-
-```kotlin
-override fun onSaveInstanceState(outState: Bundle) {
-    super.onSaveInstanceState(outState)
-    outState.putInt("SCORE", currentScore)
-    outState.putInt("LEVEL", currentLevel)
-}
-
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    if (savedInstanceState != null) {
-        currentScore = savedInstanceState.getInt("SCORE")
-        currentLevel = savedInstanceState.getInt("LEVEL")
-    }
-}
-```
-
-- En Compose, `rememberSaveable` es la alternativa recomendada.
-
----
-
-== Prioridad de Procesos
-
-El sistema Android decide qué procesos matar según la prioridad:
-
-#v(0.5em)
-
-#align(center)[
-  #table(
-    columns: (auto, auto, auto),
-    inset: 8pt,
-    align: (left, left, left),
-    table.header([*Probabilidad de ser eliminado*], [*Estado del proceso*], [*Estado de la Activity*]),
-    [Más baja], [Primer plano (con foco)], [Resumed],
-    [Baja], [Visible (sin foco)], [Started / Paused],
-    [Alta], [En segundo plano], [Stopped],
-    [Más alta], [Vacío], [Destroyed],
-  )
-]
-
-#v(0.5em)
-
-- Las apps en primer plano casi nunca son eliminadas.
-- Las apps en segundo plano pueden ser eliminadas en cualquier momento.
-
----
 
 == Recursos y Documentación
 
