@@ -61,6 +61,28 @@
 )
 
 
+#slide(
+  config: ty.config-page(
+    margin: (top: 1.5em, bottom: 1.5em),
+    header: none,
+    footer: none,
+  ),
+)[
+  #set text(size: 1.2em)
+  Esta presentación está licenciada bajo Creative Commons Attribution 4.0.
+
+  #v(1.5em)
+
+  #align(center)[
+    #link("https://creativecommons.org/licenses/by/4.0/")[
+      #image("images/cc-by.svg", height: 58pt)
+    ]
+  ]
+]
+
+
+---
+
 #outline-slide(
   title: [Contenidos],
   outline-args: (depth: 1),
