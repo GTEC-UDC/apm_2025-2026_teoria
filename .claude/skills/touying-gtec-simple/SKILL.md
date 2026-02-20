@@ -122,41 +122,49 @@ Large centered text for emphasis:
 ]
 ```
 
-### Side Image Slides
+### Slides with Side Image
 
-Full-height image on one side:
+To place an image on the side of a slide, use a regular slide with a two-column grid.
+
+**Example with image on the right:**
 
 ```typst
-#side-image-slide(
-  image: image("path/to/image.png", height: 100%, fit: "cover"),
-  title: [My Title],
-  subtitle: [Optional subtitle],
-  side: left,           // left, right, top, or bottom
-  image-width: 35%,
+== My Slide Title
+
+#grid(
+  columns: (1fr, 35%),
+  column-gutter: 1em,
+  align: horizon,
+  [
+    Content here
+  ],
+  image("path/to/image.png", width: 100%),
+)
+```
+
+Adjust the first value in `columns` to control the image width. Use `align: top` instead of `align: horizon` to align content to the top.
+
+### Colored Highlight Blocks
+
+Use `#block()` to visually highlight a quote or important information:
+
+```typst
+#block(
+  fill: luma(95%),
+  inset: 12pt,
+  radius: 5pt,
+  width: 100%,
 )[
-  Your content here
+  _"I call it my billion-dollar mistake..."_ \
+  #h(1fr) --- *Tony Hoare*, inventor of ALGOL W
 ]
 ```
 
-**Multi-column content:**
+Common fill colors:
+- `luma(95%)` — light gray (neutral, general use)
+- `#fff2df` — yellow/beige (warmer, good for quotes or warnings)
 
-```typst
-#side-image-slide(
-  composer: (1fr, 1fr, 1fr),
-  image: image("image.png", height: 100%, fit: "cover"),
-)[
-  *First Column*
-  Content here
-][
-  *Second Column*
-  More content
-][
-  *Third Column*
-  Even more content
-]
-```
-
-**Note:** Image persists across multiple pages with `#pause` or overflow.
+**Note:** Use sparingly — too many colored blocks make slides feel cluttered.
 
 ### Shaped Slides
 
