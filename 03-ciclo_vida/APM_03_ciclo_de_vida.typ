@@ -596,7 +596,7 @@ class MainActivity : ComponentActivity() {
     + `onStart()` --- se hace visible
     + `onResume()` --- obtiene el foco
 
-    *Al pulsar el botón Atrás:*
+    *Al cerrar la app:*
     + `onPause()` --- pierde el foco
     + `onStop()` --- deja de ser visible
     + `onDestroy()` --- se destruye
@@ -620,7 +620,7 @@ class MainActivity : ComponentActivity() {
     onStart Called
     onResume Called
 
-    // Al pulsar Atrás:
+    // Al cerrar la app:
     onPause Called
     onStop Called
     onDestroy Called
@@ -955,7 +955,7 @@ var revenue by rememberSaveable { mutableStateOf(0) }
       align: (left, left),
       table.header([*Escenario*], [*Callbacks ejecutados*]),
       [Abrir la app], [`onCreate` #sym.arrow `onStart` #sym.arrow `onResume`],
-      [Pulsar Atrás], [`onPause` #sym.arrow `onStop` #sym.arrow `onDestroy`],
+      [Cerrar la app], [`onPause` #sym.arrow `onStop` #sym.arrow `onDestroy`],
       [Pulsar Home], [`onPause` #sym.arrow `onStop`],
       [Volver desde Recientes], [`onRestart` #sym.arrow `onStart` #sym.arrow `onResume`],
       [Diálogo encima], [`onPause`],
