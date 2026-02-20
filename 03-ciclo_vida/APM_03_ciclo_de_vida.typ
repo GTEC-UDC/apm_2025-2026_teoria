@@ -111,40 +111,26 @@
 
 ---
 
-== Programación Dirigida por Eventos
-
-- A diferencia de una aplicación tradicional con un único `main()`, una app Android tiene *múltiples puntos de entrada*.
-
-- El flujo de ejecución *no lo controla el programador*: lo gestiona el *sistema operativo Android*.
-
-- Esto se conoce como *EDP* (Event-Driven Programming, Programación Dirigida por Eventos).
-
-- El programador *sobreescribe métodos predefinidos* (_callbacks_) para responder a eventos del sistema o del usuario.
-
-- El sistema llama a esos callbacks en momentos concretos: cuando la app se abre, cuando se minimiza, cuando se rota el dispositivo...
-
----
-
 == Arquitectura de la Plataforma Android
 
 #grid(
-  columns: (1fr, 40%),
-  column-gutter: 1em,
+  columns: (1fr, 35%),
+  column-gutter: 1.5em,
   [
-    #set text(size: 0.95em)
+    #set text(size: 0.9em)
 
     La plataforma se organiza en *5 capas*:
 
     + *Linux Kernel*: base del sistema. Gestión de memoria, threads, seguridad y drivers de hardware.
     + *HAL* (Hardware Abstraction Layer): interfaces estándar que exponen el hardware (cámara, Bluetooth, GPS...) al software.
-    + *ART + Librerías nativas C/C++*: ejecuta el bytecode de las apps. Compilación AOT/JIT y garbage collection.
+    + *ART + Librerías nativas C/C++*: similar a la JVM, ejecuta el bytecode (`.dex`) de las apps. Usa compilación AOT (_Ahead-of-Time_): compila a código nativo en la instalación, no al arrancar, reduciendo el consumo de batería.
     + *Java API Framework*: las APIs de alto nivel para el desarrollador: Activity Manager, View System, Resource Manager...
     + *System Apps*: aplicaciones del sistema (correo, SMS, contactos...) y de terceros.
   ],
   image("images/android_stack.png", width: 100%, fit: "contain"),
 )
 
-= Componentes de Android
+= Componentes de Aplicaciones Android
 
 == Los 4 Componentes de una App Android
 
@@ -162,6 +148,20 @@ Las apps Android se construyen a partir de 4 tipos de *componentes*:
   [`BroadcastReceiver`], [Escucha *eventos del sistema*: batería baja, pantalla apagada, foto tomada...],
   [`ContentProvider`], [Gestiona y comparte datos entre apps (contactos, fotos...) mediante una interfaz URI.],
 )
+
+---
+
+== Programación Dirigida por Eventos
+
+- A diferencia de una aplicación tradicional con un único `main()`, una app Android tiene *múltiples puntos de entrada*: el sistema u otras apps pueden invocar directamente cualquiera de los 4 componentes.
+
+- El flujo de ejecución *no lo controla el programador*: lo gestiona el *sistema operativo Android*. Cada componente tiene sus propios _callbacks_ que el SO invoca cuando ocurre un evento:
+  - Activity: `onCreate()`, `onResume()`, `onStop()`...
+  - Service: `onCreate()`, `onStartCommand()`...
+  - BroadcastReceiver: `onReceive()`
+  - ContentProvider: `query()`, `insert()`...
+
+- El programador *sobrescribe* esos callbacks para definir el comportamiento de la app. Esto se conoce como *EDP* (Event-Driven Programming).
 
 ---
 
@@ -327,12 +327,16 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
   column-gutter: 1em,
   [
     - Se ejecuta *una sola vez* al crear la Activity.
+
     - Equivalente al _punto de entrada_ de la aplicación (como `main()` en otros lenguajes).
+
     - Es donde se debe:
       - Llamar a `setContent { }` para establecer la UI.
       - Inicializar variables de clase.
       - Realizar la configuración inicial.
+
     - Recibe un `Bundle?` con el estado guardado previamente (o `null` si es la primera vez).
+
     - *Siempre* debe llamar a `super.onCreate()`.
   ],
   image("images/oncreate_lifecycle.png", width: 100%, fit: "contain"),
@@ -367,11 +371,15 @@ class MainActivity : ComponentActivity() {
   column-gutter: 1em,
   [
     - Se ejecuta después de `onCreate()` (o de `onRestart()`).
+
     - La Activity se hace *visible* en pantalla.
+
     - Puede ejecutarse *múltiples veces* durante la vida de la Activity.
+
     - Es el lugar para:
       - Inicializar código de mantenimiento de la UI.
       - Registrar listeners que actualizan la UI.
+
     - Se empareja con `onStop()`.
   ],
   image("images/onstart_lifecycle.png", width: 100%, fit: "contain"),
@@ -387,7 +395,7 @@ class MainActivity : ComponentActivity() {
 
     - La Activity está ahora en el estado *Resumed* (en primer plano).
 
-    - A pesar de su nombre, se llama *siempre* al iniciar la Activity, no solo al continuar.
+    // - A pesar de su nombre, se llama *siempre* al iniciar la Activity, no solo al continuar.
 
     - Es el lugar adecuado para:
       - Iniciar la *cámara*.
