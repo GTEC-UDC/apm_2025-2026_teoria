@@ -181,7 +181,7 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 
 ---
 
-== Activities: El Componente Principal
+== Activities
 
 - Una *Activity* es el componente que representa una *única pantalla* con interfaz de usuario.
 
@@ -191,7 +191,14 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 
 - Cuando una app invoca a otra, *invoca una Activity concreta*, no la app como un todo. La Activity es el *punto de entrada* para la interacción con el usuario.
 
-*Nota:* aunque tradicionalmente cada Activity representaba una pantalla, actualmente las aplicaciones pueden usar *una sola Activity* que gestiona múltiples pantallas.
+#block(
+  fill: luma(95%),
+  width: 100%,
+  inset: 12pt,
+  radius: 5pt,
+)[
+  *Nota:* aunque tradicionalmente cada Activity representaba una pantalla, actualmente las aplicaciones pueden usar *una sola Activity* que gestiona múltiples pantallas.
+]
 
 ---
 
@@ -199,11 +206,11 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 
 - Cada app tiene un fichero *`AndroidManifest.xml`* en la raíz del proyecto Android.
 
-- El sistema *no puede ejecutar* ningún componente que no esté declarado en el manifest.
-
-- El manifest también especifica:
-  - *Permisos* necesarios (internet, cámara, contactos...).
+- En él se declaran:
+  - *Componentes* de la app (Activities, Services, BroadcastReceivers, ContentProviders). El sistema no puede ejecutar ningún componente no declarado.
+  - *Metadatos* de la app (nombre, icono, tema...).
   - *Versión mínima* de Android compatible.
+  - *Permisos* necesarios (internet, cámara, contactos...).
   - *Hardware* requerido (cámara, GPS...).
 
 ---
@@ -246,10 +253,10 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 - Las aplicaciones usan *callbacks* del ciclo de vida para gestionar recursos (cámara, sensores, red...) y pausar o reanudar operaciones según la Activity gane o pierda visibilidad.
 
 #block(
-  fill: black.lighten(95%),
-  radius: 5pt,
+  fill: luma(95%),
   width: 100%,
   inset: 12pt,
+  radius: 5pt,
 )[
   *Nota:* el ciclo de vida de una Activity es independiente del ciclo de vida de la aplicación/proceso. Destruir una Activity no implica destruir la aplicación.
 ]
