@@ -727,17 +727,41 @@ class MainActivity : ComponentActivity() {
 
 == Escenario 3: Log
 
-```
-// Se pulsa Compartir:
-onPause Called
+#grid(
+  columns: (1fr, 45%),
+  column-gutter: 1em,
+  [
+    ```
+    // Se pulsa Compartir:
+    onPause Called
 
-// Se cierra el diálogo:
-onResume Called
-```
+    // Se cierra el diálogo:
+    onResume Called
+    ```
 
-- Solo se llama `onPause()` / `onResume()`.
-- La Activity *nunca* pasa a _Stopped_.
-- #warning_symb Por esto, el código en `onPause()` debe ser ligero: un código pesado retrasa la transición.
+    - Solo se llama `onPause()` / `onResume()`.
+    - La Activity *nunca* pasa a _Stopped_.
+    - #warning_symb Por esto, el código en `onPause()` debe ser ligero: un código pesado retrasa la transición.
+  ],
+  grid(
+    columns: (1fr, 1fr),
+    column-gutter: 0.5em,
+    [
+      #image("images/application.png", width: 100%, fit: "contain")
+      #place(
+        top + left,
+        dx: 133pt,
+        dy: 26pt,
+        square(
+          size: 20pt,
+          stroke: 3pt + red.darken(20%),
+          radius: 3pt,
+        ),
+      )
+    ],
+    image("images/application_share_dialog.png", width: 100%, fit: "contain"),
+  ),
+)
 
 == Visibilidad vs Foco
 
