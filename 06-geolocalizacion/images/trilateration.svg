@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="322.78244"
+   height="266.0015"
+   viewBox="0 0 322.78244 266.0015"
+   id="trilateracion"
+   version="1.1"
+   sodipodi:docname="trilateration.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="1.5384615"
+     inkscape:cx="153.725"
+     inkscape:cy="109.85"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="trilateracion">
+    <sodipodi:guide
+       position="145.53253,379.24504"
+       orientation="0,-1"
+       id="guide16"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="145.53253,379.24504"
+       orientation="1,0"
+       id="guide17"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <!-- Fondo blanco -->
+  <!--
+    Geometría exacta — los tres círculos se intersecan en P=(300,260):
+      Estación 1 → (185, 165)  r ≈ 149
+      Estación 2 → (415, 165)  r ≈ 149
+      Estación 3 → (300, 390)  r = 130
+  -->
+  <!-- ===== CÍRCULOS DE COBERTURA ===== -->
+  <g
+     id="use8"
+     transform="matrix(0,-0.54727483,0.5534013,0,84.274406,84.274329)"
+     style="color:#2563eb;display:inline;stroke-width:1.81709">
+    <!-- Punto central -->
+    <path
+       style="color:#2563eb;fill:none;stroke:currentColor;stroke-width:2.8;stroke-linecap:butt;stroke-linejoin:round;paint-order:stroke fill markers"
+       d="M 136.00622,83.070578 V 92.1375"
+       id="path15"
+       transform="matrix(0,1.807007,-1.8272355,0,151.78951,-245.76419)" />
+    <circle
+       cx="0"
+       cy="0"
+       r="5"
+       fill="currentColor"
+       id="circle9"
+       style="stroke-width:1.81709" />
+    <!-- Arco pequeño -->
+    <path
+       d="M -9,-9 A 12,12 0 0 1 9,-9"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="5.08786"
+       stroke-linecap="round"
+       id="path9"
+       style="fill:none" />
+    <!-- Arco mediano -->
+    <path
+       d="m -16,-16 a 22,22 0 0 1 32,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="4.54273"
+       stroke-linecap="round"
+       id="path10" />
+    <!-- Arco grande -->
+    <path
+       d="m -23,-23 a 32,32 0 0 1 46,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="3.9976"
+       stroke-linecap="round"
+       id="path11" />
+    <path
+       d="M -9,9 A 12,12 0 0 0 9,9"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="5.08786"
+       stroke-linecap="round"
+       id="path12" />
+    <path
+       d="m -16,16 a 22,22 0 0 0 32,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="4.54273"
+       stroke-linecap="round"
+       id="path13"
+       style="display:inline" />
+    <path
+       d="m -23,23 a 32,32 0 0 0 46,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="3.9976"
+       stroke-linecap="round"
+       id="path14"
+       style="display:inline" />
+    <path
+       style="display:inline;fill:none;stroke:currentColor;stroke-width:5.08786;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       d="m -16.641632,-6.456073 0.148463,12.9121492 -54.485878,7.2725528 -1e-6,-27.457255 z"
+       id="path16"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+  <circle
+     id="circulo_estacion_1"
+     cx="84.274391"
+     cy="84.27446"
+     r="83.274422"
+     fill="none"
+     stroke="#2563eb"
+     stroke-width="2"
+     stroke-dasharray="8, 5"
+     opacity="0.75" />
+  <circle
+     id="circulo_estacion_2"
+     cx="230.63245"
+     cy="107.91158"
+     r="91.150002"
+     fill="none"
+     stroke="#dc2626"
+     stroke-width="2"
+     stroke-dasharray="8, 5"
+     opacity="0.75" />
+  <circle
+     id="circulo_estacion_3"
+     cx="111.59017"
+     cy="198.19926"
+     r="66.80233"
+     fill="none"
+     stroke="#16a34a"
+     stroke-width="2"
+     stroke-dasharray="8, 5"
+     opacity="0.75" />
+  <!-- ===== ZONA DE INTERSECCIÓN ===== -->
+  <circle
+     id="zona_interseccion"
+     cx="145.53253"
+     cy="140.75496"
+     r="29.81353"
+     fill="#f59e0b"
+     opacity="0.22"
+     stroke="#f59e0b"
+     stroke-width="1.5"
+     style="display:inline" />
+  <g
+     id="telefono_movil"
+     transform="translate(145.53253,140.75496)"
+     style="display:inline">
+    <!-- Cuerpo -->
+    <rect
+       x="-11"
+       y="-20"
+       width="22"
+       height="40"
+       rx="3.5"
+       fill="#1e293b"
+       stroke="#64748b"
+       stroke-width="1.2"
+       id="rect5" />
+    <!-- Pantalla -->
+    <rect
+       x="-8"
+       y="-16"
+       width="16"
+       height="26"
+       rx="2"
+       fill="#38bdf8"
+       opacity="0.9"
+       id="rect6" />
+    <!-- Botón home -->
+    <circle
+       cx="0"
+       cy="15"
+       r="3"
+       fill="#475569"
+       id="circle6" />
+    <!-- Marcador posición -->
+  </g>
+  <!-- ===== LÍNEAS DE DISTANCIA ===== -->
+  <path
+     id="linea_d1"
+     style="opacity:0.85;stroke:#2563eb;stroke-width:1.8;stroke-dasharray:6, 4"
+     d="m 84.274393,84.27446 61.258137,56.4805"
+     sodipodi:nodetypes="cc" />
+  <path
+     id="linea_d2"
+     style="opacity:0.85;stroke:#dc2626;stroke-width:1.8;stroke-dasharray:6, 4"
+     d="m 230.63244,107.91158 -85.09991,32.84338"
+     sodipodi:nodetypes="cc" />
+  <path
+     id="linea_d3"
+     style="opacity:0.85;stroke:#16a34a;stroke-width:1.8;stroke-dasharray:6, 4"
+     d="m 111.59018,198.19927 33.94235,-57.44431"
+     sodipodi:nodetypes="cc" />
+  <!-- ===== ETIQUETAS DE DISTANCIA ===== -->
+  <text
+     id="etiqueta_d1"
+     x="109.76296"
+     y="104.24554"
+     font-family="sans-serif"
+     font-size="20px"
+     font-weight="bold"
+     fill="#2563eb"
+     font-style="italic">d₁</text>
+  <text
+     id="etiqueta_d2"
+     x="178.51248"
+     y="114.8047"
+     font-family="sans-serif"
+     font-size="20px"
+     font-weight="bold"
+     fill="#dc2626"
+     font-style="italic">d₂</text>
+  <text
+     id="etiqueta_d3"
+     x="129.03271"
+     y="183.73335"
+     font-family="sans-serif"
+     font-size="20px"
+     font-weight="bold"
+     fill="#16a34a"
+     font-style="italic">d₃</text>
+  <!--
+    ICONO TRANSMISOR: punto central + 3 arcos concéntricos hacia arriba (tipo wifi/antena)
+    Definido como símbolo reutilizable, coloreado con currentColor.
+    Los arcos emiten hacia arriba: ángulo 225°→315° (mitad superior del círculo).
+  -->
+  <defs
+     id="defs3" />
+  <!-- ===== TRANSMISOR 1 – azul (185,165) ===== -->
+  <!-- ===== TRANSMISOR 2 – rojo (415,165) ===== -->
+  <!-- ===== TRANSMISOR 3 – verde (300,390) ===== -->
+  <!-- Rotado 180° para que las ondas apunten hacia arriba (hacia el móvil) -->
+  <g
+     id="g8"
+     transform="matrix(0.31031615,0,0,0.31031615,145.53253,140.75496)"
+     inkscape:label="intersection"
+     style="display:inline;fill:#000000">
+    <circle
+       cx="0"
+       cy="0"
+       r="10"
+       fill="#f59e0b"
+       opacity="0.9"
+       stroke="#ffffff"
+       stroke-width="2"
+       id="circle7"
+       style="opacity:1;fill:#000000" />
+    <circle
+       cx="0"
+       cy="0"
+       r="3.5"
+       fill="#ffffff"
+       id="circle8"
+       style="fill:#000000" />
+  </g>
+  <!-- ===== TELÉFONO MÓVIL en P=(300,260) ===== -->
+  <g
+     id="g24"
+     transform="matrix(0,-0.54727483,0.5534013,0,230.63244,107.91158)"
+     style="color:#2563eb;display:inline;opacity:1;stroke:#dc2626;stroke-width:3.27077;stroke-dasharray:none">
+    <!-- Punto central -->
+    <path
+       style="color:#2563eb;fill:none;stroke:#dc2626;stroke-width:1.8;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="M 136.00622,83.070578 V 92.1375"
+       id="path17"
+       transform="matrix(0,1.807007,-1.8272355,0,151.78951,-245.76419)" />
+    <circle
+       cx="0"
+       cy="0"
+       r="5"
+       fill="currentColor"
+       id="circle17"
+       style="fill:#dc2626;fill-opacity:1;stroke:#dc2626;stroke-width:3.27077;stroke-dasharray:none" />
+    <!-- Arco pequeño -->
+    <path
+       d="M -9,-9 A 12,12 0 0 1 9,-9"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="5.08786"
+       stroke-linecap="round"
+       id="path18"
+       style="fill:none;stroke:#dc2626;stroke-width:3.27077;stroke-dasharray:none" />
+    <!-- Arco mediano -->
+    <path
+       d="m -16,-16 a 22,22 0 0 1 32,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="4.54273"
+       stroke-linecap="round"
+       id="path19"
+       style="stroke:#dc2626;stroke-width:3.27077;stroke-dasharray:none" />
+    <!-- Arco grande -->
+    <path
+       d="m -23,-23 a 32,32 0 0 1 46,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="3.9976"
+       stroke-linecap="round"
+       id="path20"
+       style="stroke:#dc2626;stroke-width:3.27077;stroke-dasharray:none" />
+    <path
+       d="M -9,9 A 12,12 0 0 0 9,9"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="5.08786"
+       stroke-linecap="round"
+       id="path21"
+       style="stroke:#dc2626;stroke-width:3.27077;stroke-dasharray:none" />
+    <path
+       d="m -16,16 a 22,22 0 0 0 32,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="4.54273"
+       stroke-linecap="round"
+       id="path22"
+       style="display:inline;stroke:#dc2626;stroke-width:3.27077;stroke-dasharray:none" />
+    <path
+       d="m -23,23 a 32,32 0 0 0 46,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="3.9976"
+       stroke-linecap="round"
+       id="path23"
+       style="display:inline;stroke:#dc2626;stroke-width:3.27077;stroke-dasharray:none" />
+    <path
+       style="display:inline;fill:none;stroke:#dc2626;stroke-width:3.27077;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m -16.641632,-6.456073 0.148463,12.9121492 -54.485878,7.2725528 -1e-6,-27.457255 z"
+       id="path24"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+  <g
+     id="g32"
+     transform="matrix(0,-0.54727483,0.5534013,0,110.81533,198.65711)"
+     style="color:#2563eb;display:inline;stroke:#16a34a;stroke-width:1.81709;stroke-opacity:1">
+    <!-- Punto central -->
+    <path
+       style="color:#2563eb;fill:none;stroke:#16a34a;stroke-width:2.8;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 136.00622,83.070578 V 92.1375"
+       id="path25"
+       transform="matrix(0,1.807007,-1.8272355,0,151.78951,-245.76419)" />
+    <circle
+       cx="0"
+       cy="0"
+       r="5"
+       fill="currentColor"
+       id="circle25"
+       style="fill:#16a34a;fill-opacity:1;stroke:#16a34a;stroke-width:1.81709;stroke-opacity:1" />
+    <!-- Arco pequeño -->
+    <path
+       d="M -9,-9 A 12,12 0 0 1 9,-9"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="5.08786"
+       stroke-linecap="round"
+       id="path26"
+       style="fill:none;stroke:#16a34a;stroke-opacity:1" />
+    <!-- Arco mediano -->
+    <path
+       d="m -16,-16 a 22,22 0 0 1 32,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="4.54273"
+       stroke-linecap="round"
+       id="path27"
+       style="stroke:#16a34a;stroke-opacity:1" />
+    <!-- Arco grande -->
+    <path
+       d="m -23,-23 a 32,32 0 0 1 46,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="3.9976"
+       stroke-linecap="round"
+       id="path28"
+       style="stroke:#16a34a;stroke-opacity:1" />
+    <path
+       d="M -9,9 A 12,12 0 0 0 9,9"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="5.08786"
+       stroke-linecap="round"
+       id="path29"
+       style="stroke:#16a34a;stroke-opacity:1" />
+    <path
+       d="m -16,16 a 22,22 0 0 0 32,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="4.54273"
+       stroke-linecap="round"
+       id="path30"
+       style="display:inline;stroke:#16a34a;stroke-opacity:1" />
+    <path
+       d="m -23,23 a 32,32 0 0 0 46,0"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="3.9976"
+       stroke-linecap="round"
+       id="path31"
+       style="display:inline;stroke:#16a34a;stroke-opacity:1" />
+    <path
+       style="display:inline;fill:none;stroke:#16a34a;stroke-width:5.08786;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m -16.641632,-6.456073 0.148463,12.9121492 -54.485878,7.2725528 -1e-6,-27.457255 z"
+       id="path32"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+</svg>
