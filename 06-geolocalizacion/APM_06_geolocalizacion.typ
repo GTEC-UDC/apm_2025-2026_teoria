@@ -420,7 +420,7 @@ Las opciones disponibles en el diálogo de permisos han evolucionado a lo largo 
     [Añade *"Solo mientras se usa la app"* para localización: el permiso solo se aplica cuando la app está en primer plano.],
 
     [Android 11+],
-    [Añade *"Solo esta vez"* (_one-time permission_): el permiso se revoca automáticamente al salir de la app, y debe solicitarse de nuevo en el siguiente acceso.],
+    [Elimina *"Permitir siempre"* del diálogo de la app (ahora solo accesible desde Ajustes). Añade *"Solo esta vez"*: el permiso se revoca al salir. El diálogo actual muestra únicamente: "Solo mientras se usa la app" · "Solo esta vez" · "No permitir".],
   )
 ]
 
@@ -626,7 +626,7 @@ A partir de Android 12 (API 31), el diálogo de permisos de localización ofrece
         [Android 9 y anterior], [El permiso de primer plano incluye automáticamente el de segundo plano.],
         [Android 10 (API 29)], [Se debe declarar y solicitar `ACCESS_BACKGROUND_LOCATION` *por separado*.],
         [Android 11+ (API 30)],
-        [El diálogo del sistema ya no muestra "Permitir siempre". El usuario debe ir a *Ajustes* manualmente y seleccionar "Permitir siempre" para permitir la lolalización en segundo plano.],
+        [El diálogo del sistema ya no muestra "Permitir siempre". El usuario debe ir a *Ajustes* manualmente y seleccionar "Permitir siempre" para permitir la localización en segundo plano.],
       )
 
 
