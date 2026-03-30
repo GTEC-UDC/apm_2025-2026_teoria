@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="582.96558"
+   height="525.73322"
+   viewBox="0 0 582.96558 525.73322"
+   sodipodi:docname="room_architecture.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker12"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path12" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="1.4760148"
+     inkscape:cx="307.92375"
+     inkscape:cy="394.305"
+     inkscape:window-width="964"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1"
+     transform="translate(-5.2679597,-7.1876599)">
+    <rect
+       style="display:inline;fill:#cfe2f3;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       id="rect6"
+       width="581.16553"
+       height="100.31234"
+       x="6.1679597"
+       y="8.0876598"
+       ry="14.731244" />
+    <rect
+       style="display:inline;fill:#cccccc;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       id="rect7"
+       width="581.16553"
+       height="100.31234"
+       x="6.1679597"
+       y="431.70853"
+       ry="14.731244"
+       inkscape:label="rect7" />
+    <rect
+       style="display:inline;opacity:1;fill:#93c47d;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       id="rect8"
+       width="263.72659"
+       height="72.908852"
+       x="138.54758"
+       y="199.36148"
+       ry="14.731244" />
+    <rect
+       style="display:inline;opacity:1;fill:#ea9999;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       id="rect9"
+       width="180.05534"
+       height="72.908844"
+       x="407.27817"
+       y="302.17212"
+       ry="14.731244" />
+    <path
+       style="opacity:1;fill:#ea9999;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;marker-end:url(#Triangle);paint-order:fill markers stroke"
+       d="M 47.906484,402.41447 V 141.80319"
+       id="path10" />
+    <path
+       style="opacity:1;fill:#ea9999;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;marker-end:url(#marker12);paint-order:fill markers stroke"
+       d="M 60.841235,141.80319 V 402.41447"
+       id="path11" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;line-height:1;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       x="163.47086"
+       y="71.833176"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         x="163.47086"
+         y="71.833176">Room Database</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;line-height:1;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       x="163.76949"
+       y="494.62216"
+       id="text13"><tspan
+         sodipodi:role="line"
+         id="tspan13"
+         x="163.76949"
+         y="494.62216">Rest of The App</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:1;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       x="148.02406"
+       y="245.0159"
+       id="text14"><tspan
+         sodipodi:role="line"
+         id="tspan14"
+         x="148.02406"
+         y="245.0159">Data Access Objects</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:1;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       x="451.62576"
+       y="348.33322"
+       id="text15"><tspan
+         sodipodi:role="line"
+         id="tspan15"
+         x="451.62576"
+         y="348.33322">Entities</tspan></text>
+    <path
+       style="opacity:1;fill:#ea9999;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;marker-end:url(#Triangle);paint-order:fill markers stroke"
+       d="M 194.38787,402.41447 V 293.66675"
+       id="path15"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:#ea9999;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;marker-end:url(#marker12);paint-order:fill markers stroke"
+       d="M 207.32262,293.66675 V 402.41447"
+       id="path16"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:#ea9999;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;marker-end:url(#Triangle);paint-order:fill markers stroke"
+       d="M 420.7201,418.22361 V 387.56346"
+       id="path17"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:#ea9999;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;marker-end:url(#marker12);paint-order:fill markers stroke"
+       d="m 433.65485,387.56346 v 30.66015"
+       id="path18"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       x="70.381081"
+       y="394.3541"
+       id="text18"><tspan
+         sodipodi:role="line"
+         id="tspan18"
+         x="70.381081"
+         y="394.3541">Get DAO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       x="217.17084"
+       y="304.32687"
+       id="text19"><tspan
+         sodipodi:role="line"
+         id="tspan19"
+         x="217.17084"
+         y="304.32687">Get Entities</tspan><tspan
+         sodipodi:role="line"
+         x="217.17084"
+         y="328.32687"
+         id="tspan20">from db</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       x="217.17084"
+       y="372.35431"
+       id="text22"><tspan
+         sodipodi:role="line"
+         id="tspan21"
+         x="217.17084"
+         y="372.35431">Persist changes</tspan><tspan
+         sodipodi:role="line"
+         x="217.17084"
+         y="396.35431"
+         id="tspan22">back to db</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+       x="447.00977"
+       y="400.13074"
+       id="text24"><tspan
+         sodipodi:role="line"
+         x="447.00977"
+         y="400.13074"
+         id="tspan24">get/set field</tspan><tspan
+         sodipodi:role="line"
+         x="447.00977"
+         y="424.13074"
+         id="tspan25">values</tspan></text>
+  </g>
+</svg>
