@@ -478,7 +478,6 @@ El pulgar *no escala* con el tamaño de pantalla: la zona _Natural_ se mantiene 
 = Dark patterns
 
 
-
 == Dark patterns
 
 Término acuñado por Harry Brignull en 2010, investigador de UX y fundador de #link("https://www.deceptive.design/")[deceptive.design]
@@ -499,115 +498,98 @@ Término acuñado por Harry Brignull en 2010, investigador de UX y fundador de #
 ]
 
 
-== Tipos de dark patterns
+== Difícil de cancelar (_hard to cancel_)
 
-La web #link("https://www.deceptive.design")[deceptive.design] recoge *16 tipos* de dark patterns con ejemplos documentados. A continuación se describen todos ellos.
+Suscribirse es sencillo, pero cancelar es deliberadamente complicado: opciones enterradas, llamadas telefónicas obligatorias, y agentes de retención.
 
-#[
-  #set text(size: 0.92em)
+_Ejemplo:_ The New York Times. Suscripción online en segundos, pero cancelar requiere llamar a atención al cliente.
 
-  === Prevención de comparaciones (_comparison prevention_)
-  Se dificulta la comparación de productos porque las características y precios se combinan de manera compleja o porque la información esencial está escondida.
-
-  _Ejemplo:_ T-Mobile mostraba impuestos en algunos planes pero no en otros, impidiendo la comparación directa. La opción más económica aparecía como un enlace oculto al final de la página.
-
-  === Confirmshaming
-  Manipulación emocional que culpabiliza al usuario por rechazar una oferta. Las opciones de rechazo usan un lenguaje diseñado para que decir "no" parezca moralmente reprochable.
-
-  _Ejemplo:_ MyMedic (2018), tienda online de botiquines y material médico, mostraba como opciones de rechazo para notificaciones frases como _"No, prefiero desangrarme"_ o _"No, no quiero seguir vivo"_.
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 1.5em,
+  align: top,
+)[
+  #figure(
+    image("images/dp-hard-to-cancel-1.png", width: 80%),
+    gap: 0.4em,
+    caption: [_"Cancel or pause anytime"_],
+  )
+][
+  #figure(
+    image("images/dp-hard-to-cancel-2.png", width: 80%),
+    gap: 0.4em,
+    caption: [_Para cancelar hay que llamar por teléfono_],
+  )
 ]
 
 
-== Tipos de dark patterns (II)
 
-=== Anuncios disfrazados (_disguised ads_)
-El usuario cree que pulsa un elemento legítimo de la interfaz, pero en realidad es un anuncio diseñado para imitar botones o controles reales del sitio.
+== Suscripción oculta (_hidden subscription_)
 
-_Ejemplo:_ Softpedia colocaba botones de descarga falsos que imitaban el aspecto del botón real de descarga, provocando clics accidentales en anuncios.
+El usuario cree que realiza una acción puntual pero queda inscrito en pagos recurrentes. La información clave está ausente o escondida en la interfaz.
 
-=== Escasez falsa (_fake scarcity_)
-Se indica falsamente que el stock o la disponibilidad son limitados, explotando el sesgo cognitivo de escasez para crear urgencia artificial de compra.
+#v(1.5em)
 
-_Ejemplo:_ La app "Sales & Stock Counter" permitía mostrar mensajes falsos de stock bajo y cifras de ventas inventadas. La CMA del Reino Unido multó a Viagogo con 400.000 £ por estas tácticas.
-
-
-== Tipos de dark patterns (III)
-
-=== Prueba social falsa (_fake social proof_)
-Se muestran reseñas, testimonios o notificaciones de actividad fabricados para hacer creer que un producto es más popular de lo que realmente es.
-
-_Ejemplo:_ "Sales Pop" (Beeketing) mostraba notificaciones como _"Alycia en San Francisco acaba de comprar X hace 4 min"_, con ubicaciones y tiempos generados aleatoriamente.
-
-=== Urgencia falsa (_fake urgency_)
-Se presiona al usuario con un límite temporal ficticio para forzar una decisión rápida. La presión temporal perjudica la capacidad de decisión del usuario.
-
-_Ejemplo:_ La app Hurrify (Shopify) mostraba temporizadores de cuenta atrás para ofertas que, al llegar a cero, se reiniciaban automáticamente. Fue retirada de la Shopify App Store en 2023.
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 2em,
+  align: horizon,
+)[
+  _Ejemplo:_ Figma. Al cambiar el permiso de un colaborador a _"can edit"_, se generaba silenciosamente una suscripción mensual cargada a quien compartía, sin ningún aviso en la interfaz.
+][
+  #figure(
+    image("images/dp-hidden-subscription-2.png", width: 100%),
+    caption: [Figma: diálogo _"Share project"_],
+  )
+]
 
 
-== Tipos de dark patterns (IV)
+== Interrupciones persistentes (_nagging_)
 
-=== Acción forzada (_forced action_)
-El usuario quiere realizar una acción legítima pero se le obliga a hacer otra cosa no deseada. Puede combinarse con otras tácticas para hacer que pasos opcionales parezcan obligatorios.
+Cada interrupción consume atención del usuario. La acumulación agota su resistencia hasta que ceder es más fácil que resistir.
 
-_Ejemplo:_ LinkedIn (2015): una pantalla titulada _"Empieza añadiendo tu email"_ parecía obligatoria, pero su función real era acceder a la bandeja de entrada y extraer todos los contactos. El enlace _"Saltar"_ estaba minimizado.
+#grid(
+  columns: (3.2fr, 1fr),
+  column-gutter: 2em,
+  align: horizon,
+)[
+  - La app repite la *misma solicitud* indefinidamente
 
-=== Difícil de cancelar (_hard to cancel / roach motel_)
-Registrarse es muy fácil, pero cancelar es deliberadamente complicado: opciones ocultas, llamadas telefónicas, tiempos de espera y redirecciones interminables.
+  - Solo ofrece _"Not Now"_ — no existe un rechazo permanente
 
-_Ejemplo:_ The New York Times: suscripción online en segundos. Para cancelar: llamar a atención al cliente, soportar esperas y unos 8 minutos de conversación con un agente.
+  - Explota el agotamiento: con el tiempo más usuarios acaban aceptando
 
-== Tipos de dark patterns (V)
+  #v(1em)
 
-=== Costes ocultos (_hidden costs_)
-El usuario es atraído con un precio bajo. Tras invertir tiempo y esfuerzo en el proceso de compra, descubre cargos inesperados en el último paso, cuando es menos probable que abandone.
-
-_Ejemplo:_ StubHub mostraba precios bajos y tras una serie de pasos revelaba el precio real (más alto). Los usuarios que no veían las tasas por adelantado gastaban un 21% más (Blake et al., 2021).
-
-=== Suscripción oculta (_hidden subscription_)
-El usuario es inscrito sin saberlo en pagos recurrentes, sin divulgación clara. Se usa para que una suscripción parezca una compra puntual.
-
-_Ejemplo:_ En Figma, al compartir un diseño con permiso de edición se creaba silenciosamente una suscripción mensual para el destinatario, cargada a la tarjeta del usuario que compartía.
-
-== Tipos de dark patterns (VI)
-
-=== Interrupciones persistentes (_Nagging_)
-El usuario es interrumpido persistentemente con solicitudes repetitivas para hacer algo que no le interesa, agotando su resistencia hasta que ceder resulta más fácil que resistirse.
-
-_Ejemplo:_ Instagram (2018) solicitaba activar notificaciones repetidamente durante meses. Solo permitía _"Ahora no"_ en lugar de rechazar permanentemente.
-
-=== Obstrucción (_obstruction_)
-Se dificulta deliberadamente una acción legítima del usuario (rechazar, cancelar, configurar privacidad), diseñando una experiencia asimétrica que agota al usuario hasta que desiste.
-
-_Ejemplo:_ Facebook: aceptar opciones invasivas de privacidad era un solo clic, pero rechazarlas requería múltiples pasos y encontrar interruptores poco claros (Consejo de Consumidores de Noruega, 2018).
-
-#v(0.5em)
-
-=== Preselección (_preselection_)
-Se presenta una opción ya marcada por defecto para influir en la decisión del usuario, explotando que las personas tienden a aceptar opciones preseleccionadas sin revisarlas.
-
-_Ejemplo:_ La campaña de Trump (2021) preseleccionaba _"Hacer de esta una donación mensual recurrente"_, engañando a donantes en pagos recurrentes no intencionados (documentado por The New York Times).
-
-#v(0.5em)
-
-=== _Sneaking_
-Se oculta o retrasa información relevante para la transacción, manipulando al usuario para que realice acciones que no habría hecho si conociese todos los detalles.
-
-_Ejemplo:_ Sports Direct (2015) añadía silenciosamente una suscripción a una revista (1 £) al carrito durante el _checkout_, sin consentimiento del usuario.
+  _Ejemplo:_ Instagram (2018) solicitaba activar notificaciones durante meses. La única opción disponible era _"Not Now"_, que simplemente posponía el diálogo.
+][
+  #image("images/dp-nagging-1.png", width: 100%, fit: "contain")
+]
 
 
-== Tipos de dark patterns (VII)
+== Acción forzada (_forced action_)
 
-=== Lenguaje engañoso (_Trick wording_)
-Se usa lenguaje confuso o deliberadamente equívoco para engañar al usuario, aprovechando que los usuarios escanean el contenido en lugar de leerlo detenidamente.
+El usuario quiere completar una acción legítima pero se le obliga a hacer otra cosa no deseada. Pasos opcionales aparecen disfrazados de obligatorios.
 
-_Ejemplo:_ Ryanair (2010--2013): un desplegable titulado _"Seleccione su país de residencia"_ ocultaba un seguro de viaje. Para rechazarlo, había que encontrar _"Sin seguro"_ entre Letonia y Lituania en la lista alfabética.
+_Ejemplo:_ LinkedIn (2015). Durante el registro, un paso solicitaba acceso al email del usuario para "sugerir contactos", importando silenciosamente toda su libreta de direcciones. Al intentar saltarlo, un diálogo de disuasión preguntaba _"¿Seguro que quieres perderte esto?"_.
 
-#v(0.5em)
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 1.5em,
+  align: bottom,
+)[
+  #figure(
+    image("images/dp-forced-action-1.png", width: 100%),
+    caption: [_Añadir el email: parece obligatorio_],
+  )
+][
+  #figure(
+    image("images/dp-forced-action-2.png", width: 100%),
+    caption: [_Diálogo de disuasión al intentar saltarlo_],
+  )
+]
 
-=== Interferencia visual (_visual interference_)
-Se oculta o resta visibilidad a información importante mediante texto de bajo contraste, tipografía pequeña o disposición confusa de la página.
 
-_Ejemplo:_ Tesla (2019): en su app, la política de no devolución de _"Full Self-Driving"_ (4.000 \$) estaba en el texto de menor contraste de la página. Clientes compraron accidentalmente y Tesla rechazó los reembolsos.
 
 
 == Dark patterns y regulación
@@ -618,17 +600,22 @@ _Ejemplo:_ Tesla (2019): en su app, la política de no devolución de _"Full Sel
   align: top,
 )[
   *DSA (Digital Services Act)*
+  #set text(size: 0.94em)
 
-  - *Art. 25*: prohíbe explícitamente dark patterns en plataformas digitales
-  - En vigor para todas las plataformas desde febrero 2024
-  - Prohíbe: manipular decisiones, dificultar la baja, presentar opciones engañosas
-  - Sanciones: hasta *6% de la facturación global*
+  - Art. 25: prohíbe dark patterns en _plataformas online_ (servicios que alojan y distribuyen contenido de usuarios: redes sociales, tiendas de apps...)
+  - Muy grandes plataformas (+45M usuarios en la UE): desde agosto 2023
+  - Resto de plataformas: desde febrero 2024
+  - Pequeñas empresas: exentas de la mayoría de obligaciones
+  - Sanciones: hasta 6% de la facturación global
 ][
-  *GDPR y privacidad*
+  *GDPR*
+  #set text(size: 0.94em)
 
-  - Ya prohibía dark patterns en flujos de *consentimiento* (cookies, permisos, privacidad)
-  - El consentimiento debe ser *libre, informado, específico e inequívoco*
-  - Rechazar debe ser *tan fácil como aceptar*
+  - Prohíbe dark patterns en los diálogos donde el usuario acepta o rechaza algo: cookies, permisos, privacidad...
+  - en vigor desde mayo 2018
+  - Se aplica a cualquier desarrollador que trate datos de residentes en la UE
+  - El consentimiento debe ser libre, informado, específico e inequívoco
+  - Rechazar debe ser tan fácil como aceptar
 ]
 
 #v(0.5em)
@@ -1350,7 +1337,7 @@ Material 3 define una tipografía con 5 categorías (_display_, _headline_, _tit
   *Floating Action Button*: acción principal de la pantalla. Tres tamaños: `FloatingActionButton`, `SmallFloatingActionButton` y `ExtendedFloatingActionButton` (con texto).
 ][
   #set align(right)
-  #image("images/google_snackbar.jpg", height: 33%)
+  #image("images/google_snackbar.png", height: 33%)
 ][
   *Snackbar*: mensajes breves en la parte inferior. Puede incluir una acción opcional.
 ][
