@@ -274,56 +274,7 @@ Los *permisos peligrosos* (_dangerous permissions_) requieren aprobación explí
 
 
 // ============================================================================
-// 2. CALIDAD DE LA APP
-// ============================================================================
-
-= Calidad de la app
-
-== Checklist de calidad
-
-// Fuente: https://developer.android.com/docs/quality-guidelines/core-app-quality
-
-Google define criterios de *calidad core* para apps Android:
-
-#v(0.3em)
-
-#[
-  #set text(size: 0.95em)
-  #table(
-    columns: (7em, 1fr),
-    inset: (x: 8pt, y: 12pt),
-    align: left,
-    table.header([*Categoría*], [*Criterios clave*]),
-    [Funcionalidad], [La app no se cuelga, no tiene ANRs, funciona offline cuando es posible],
-    [Rendimiento], [Startup en *< 2 s*, scroll fluido a 60 fps, sin jank visual],
-    [Usabilidad], [Navegación intuitiva, texto legible, touch targets adecuados (≥ 48 dp)],
-    [Diseño visual], [Consistencia con Material Design, soporte de dark theme],
-    [Notificaciones], [Útiles, configurables por el usuario, con canales apropiados],
-    [Privacidad], [Permisos mínimos necesarios, datos protegidos, política de privacidad clara],
-    [Seguridad], [HTTPS, datos sensibles cifrados, validación de inputs],
-  )
-]
-
-
-== Rendimiento y estabilidad
-
-*Métricas clave (Android Vitals)*
-
-- *Cold start* < 2 segundos
-- *Renderizado fluido*: sin frames perdidos (jank), independientemente del refresh rate del dispositivo (60/90/120 Hz)
-- *Application Not Responding (ANR) rate* < 0,47%. ANR ocurre cuando el hilo principal se bloquea > 5 s
-- *Crash rate* < 1,09%: apps que superan estos umbrales pierden visibilidad en la Play Store
-
-#v(1em)
-
-*Herramientas de diagnóstico*
-
-- Android Studio Profiler (CPU, memoria, red)
-- Google Play Console → Android Vitals
-
-
-// ============================================================================
-// 3. RESTRICCIONES DEL DISPOSITIVO MÓVIL
+// 2. RESTRICCIONES DEL DISPOSITIVO MÓVIL
 // ============================================================================
 
 = Restricciones del dispositivo móvil
