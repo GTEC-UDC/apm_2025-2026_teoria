@@ -1,5 +1,5 @@
 // ============================================================================
-// Usabilidad y UX
+// Usabilidad, UX, y UI
 // Arquitecturas y Plataformas Móviles (APM)
 // Máster Universitario en Ingeniería Informática - Universidade da Coruña
 // Curso 2025/2026
@@ -10,7 +10,7 @@
 #show: gtec-simple-theme.with(
   aspect-ratio: "16-9",
   ty.config-info(
-    title: [Usabilidad y UX],
+    title: [Usabilidad, UX, y UI],
     author: [Tomás Domínguez Bolaño],
     date: [Curso 2025/2026 --- 2º Cuatrimestre],
   ),
@@ -1008,7 +1008,7 @@ Material 3 define una tipografía con 5 categorías (_display_, _headline_, _tit
   column-gutter: 1.5em,
   // align: top,
 )[
-  - *dp* (_density-independent pixels_): unidad para dimensiones de UI (márgenes, tamaños de componentes). Permite ajustar el tamaño físico de los elementos independientemente de la densidad de la pantalla.
+  - *dp* (_density-independent pixels_): unidad para dimensiones dy UI (márgenes, tamaños de componentes). Permite ajustar el tamaño físico de los elementos independientemente de la densidad de la pantalla.
 
   - *sp* (_scale-independent pixels_): la unidad equivalente para texto. Además de la densidad de pantalla, tiene en cuenta las preferencias del usuario sobre tamaño de fuente y pantalla.
 
