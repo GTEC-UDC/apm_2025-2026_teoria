@@ -226,7 +226,7 @@ El framework *HEART* fue propuesto por Kerry Rodden, Hilary Hutchinson y Xin Fu 
 
 - *Mayor tasa de desinstalación* → peor retención, menores ingresos
 
-- Adquirir un nuevo cliente cuesta *5--25× más* que retener uno existente (dato de industria general, aplicable también a apps) #h(0.3em) #text(size: 0.8em)[#link("https://hbr.org/2014/10/the-value-of-keeping-the-right-customers")[(Gallo, HBR, 2014; datos de Bain & Company)]]
+- Adquirir un nuevo cliente cuesta *5--25 $times$ más* que retener uno existente (dato de industria general, aplicable también a apps) #h(0.3em) #text(size: 0.8em)[#link("https://hbr.org/2014/10/the-value-of-keeping-the-right-customers")[(Gallo, HBR, 2014; datos de Bain & Company)]]
 
 #v(0.5em)
 
@@ -807,6 +807,55 @@ Cada color clave tiene roles semánticos con variantes _container_ y _on-color_.
 ]
 
 
+== Accesibilidad en colores
+
+#grid(
+  columns: (1.5fr, 1fr),
+  column-gutter: 1.5em,
+  align: horizon,
+)[
+  Las paletas tonales de M3 están diseñadas para cumplir los ratios de contraste accesibles por defecto:
+
+  - *Siempre emparejar un color con su variante on-*: p.ej. `primary` con `onPrimary`.
+
+  - *No mezclar roles distintos*: p.ej. `tertiaryContainer` con `onPrimaryContainer`. Produce contraste insuficiente
+][
+  // Fuente: https://developer.android.com/develop/ui/compose/designsystems/material3
+  #figure(
+    image("images/m3-contrast.png", width: 100%),
+    caption: [Contraste suficiente (izquierda) vs.\ contraste pobre (derecha).],
+  )
+]
+
+#v(0.3em)
+
+#[
+  #set text(size: 0.92em)
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 1.5em,
+  )[
+    ```kotlin
+    val cs = MaterialTheme.colorScheme
+    // Correcto: emparejar con on-
+    Button(colors = ButtonDefaults.buttonColors(
+        containerColor = cs.primary,
+        contentColor = cs.onPrimary
+    )) { Text("Aceptar") }
+    ```
+  ][
+    ```kotlin
+    val cs = MaterialTheme.colorScheme
+    // Incorrecto: mezcla de roles
+    Button(colors = ButtonDefaults.buttonColors(
+        containerColor = cs.tertiaryContainer,
+        contentColor = cs.primaryContainer
+    )) { Text("Ignorar") }
+    ```
+  ]
+]
+
+
 == Esquema de colores en Compose
 
 #grid(
@@ -1129,70 +1178,20 @@ Material 3 define una tipografía con 5 categorías (_display_, _headline_, _tit
   - `GenericShape` (path personalizado).
 ]
 
-== Forma: uso
-
-#grid(
-  columns: (2fr, 1fr),
-  column-gutter: 1.5em,
-  align: horizon,
-)[
-  Los componentes acceden a las formas a través de `MaterialTheme.shapes`:
-
-  - Cada componente tiene una forma asignada por defecto
-  - Se puede sobrescribir por componente con un valor personalizado
-
-  ```kotlin
-  Card(shape = MaterialTheme.shapes.medium) { /* ... */ }
-
-  FloatingActionButton(
-      shape = MaterialTheme.shapes.large,
-      onClick = {}
-  ) { /* ... */ }
-
-  // Forma personalizada directa
-  Button(shape = RoundedCornerShape(50%)) { /* ... */ }
-  ```
-][
-  #figure(
-    image("images/m3-shape2.png", height: 17.5em, fit: "contain"),
-    caption: text(size: 0.85em)[Formas por defecto en M3.],
-  )
-]
-
-
 == Elevación
-
-#grid(
-  columns: (1.2fr, 1fr),
-  column-gutter: 1.5em,
-  // stroke: black
-)[
-  La *elevación* representa la distancia lógica entre superficies (en dp), expresada visualmente mediante color y sombras. Se usa para:
-
-  1. Reflejar relaciones espaciales (p.ej. una tarjeta visualmente separada del fondo)
-
-  2. Dirigir la atención (p.ej. un diálogo aparece delante del resto de la interfaz)
-
-  M3 define *6 niveles* (0-5). Los niveles 0-3 son estados de reposo; los niveles 4-5 se reservan para estados de interacción (hover, arrastre). El tono de la superficie refleja el nivel de elevación.
-][
-  #align(center)[
-    #image("images/m3-elevation-tonal_v.png", width: 95%)
-  ]
-]
-
-== Elevación: representación visual
 
 #grid(
   columns: (1fr, 1fr),
   column-gutter: 1.5em,
   align: top,
 )[
-  M3 representa la elevación con tres recursos visuales:
+  #set text(size: 0.98em)
+  La elevación representa la distancia entre superficies (en dp). M3 la expresa mediante tres recursos visuales:
   - *Tono*: a mayor elevación, tinte más prominente del color _primary_
   - *Sombra*:
     - pequeñas y nítidas → poca distancia
     - grandes y difusas → mucha distancia
-  - *Scrim*: superposición semitransparente bajo modales; En compose es gestionado automaticamente por los componentes.
+  - *Scrim*: superposición semitransparente bajo modales; en Compose es gestionado automáticamente por los componentes.
 
   ```kotlin
   Surface(
@@ -1346,89 +1345,6 @@ Material 3 define una tipografía con 5 categorías (_display_, _headline_, _tit
 ][
   *Cards*: contenedor para agrupar contenido y acciones de un mismo elemento. M3 ofrece 3 variantes: `Card` (filled), `ElevatedCard` y `OutlinedCard`.
 ]
-
-
-== Personalización de componentes
-
-#grid(
-  columns: (1fr, 2.4fr),
-  column-gutter: 1.5em
-)[
-  Los componentes M3 exponen APIs para construir configuraciones personalizadas de colores, elevación y formas.
-][
-  #set text(size: 0.89em)
-  ```kotlin
-  val customCardColors = CardDefaults.cardColors(
-      contentColor = MaterialTheme.colorScheme.primary,
-      containerColor = MaterialTheme.colorScheme.primaryContainer,
-      disabledContentColor = MaterialTheme.colorScheme.surface,
-      disabledContainerColor = MaterialTheme.colorScheme.onSurface,
-  )
-
-  val customCardElevation = CardDefaults.cardElevation(
-      defaultElevation = 8.dp,
-      pressedElevation = 2.dp,
-      focusedElevation = 4.dp
-  )
-
-  Card(
-      colors = customCardColors,
-      elevation = customCardElevation
-  ) {
-      // Contenido del card
-  }
-  ```
-]
-
-
-== Accesibilidad en colores
-
-#grid(
-  columns: (1.5fr, 1fr),
-  column-gutter: 1.5em,
-  align: horizon,
-)[
-  Las paletas tonales de M3 están diseñadas para cumplir los ratios de contraste accesibles por defecto:
-
-  - *Siempre emparejar un color con su variante on-*: p.ej. `primary` con `onPrimary`.
-
-  - *No mezclar roles distintos*: p.ej. `tertiaryContainer` con `onPrimaryContainer`. Produce contraste insuficiente
-][
-  // Fuente: https://developer.android.com/develop/ui/compose/designsystems/material3
-  #figure(
-    image("images/m3-contrast.png", width: 100%),
-    caption: [Contraste suficiente (izquierda) vs.\ contraste pobre (derecha).],
-  )
-]
-
-#v(0.3em)
-
-#[
-  #set text(size: 0.92em)
-  #grid(
-    columns: (1fr, 1fr),
-    column-gutter: 1.5em,
-  )[
-    ```kotlin
-    val cs = MaterialTheme.colorScheme
-    // Correcto: emparejar con on-
-    Button(colors = ButtonDefaults.buttonColors(
-        containerColor = cs.primary,
-        contentColor = cs.onPrimary
-    )) { Text("Aceptar") }
-    ```
-  ][
-    ```kotlin
-    val cs = MaterialTheme.colorScheme
-    // Incorrecto: mezcla de roles
-    Button(colors = ButtonDefaults.buttonColors(
-        containerColor = cs.tertiaryContainer,
-        contentColor = cs.primaryContainer
-    )) { Text("Ignorar") }
-    ```
-  ]
-]
-
 
 
 // ============================================================================
@@ -1748,8 +1664,6 @@ Compose proporciona _scaffolds_ para cada canonical layout. Ejemplo de list-deta
 #show: ty.appendix
 
 = Apéndice
-
----
 
 == Recursos y Documentación
 
