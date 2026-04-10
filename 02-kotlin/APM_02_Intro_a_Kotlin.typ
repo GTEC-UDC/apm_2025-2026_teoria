@@ -95,6 +95,7 @@
 = Introducción
 
 == Historia
+// Fuente: https://kotlinlang.org/lp/10yearsofkotlin/past/
 
 - Lenguaje creado por *JetBrains*, empresa fundada en 2000 en Praga, conocida por desarrollar el IDE IntelliJ IDEA.
 
@@ -143,6 +144,7 @@
 = Conceptos Básicos
 
 == Hello World
+// Fuente: https://kotlinlang.org/docs/kotlin-tour-hello-world.html
 
 ```kotlin
 fun main() {
@@ -158,6 +160,7 @@ fun main() {
 ---
 
 == Paquetes, Imports y Comentarios
+// Fuente: https://kotlinlang.org/docs/packages.html
 
 ```kotlin
 package com.example.myapp  // Declaración de paquete
@@ -206,6 +209,7 @@ import kotlin.math.*        // Import de todo el paquete
 = Variables y Tipos
 
 == Variables: `val` vs `var`
+// Fuente: https://kotlinlang.org/docs/basic-syntax.html#variables
 
 - En Kotlin, las variables se declaran con `val` o `var`:
 
@@ -229,6 +233,7 @@ nombre = "Luis"       // Error de compilación
 ---
 
 == Objetos Inmutables vs Variables Inmutables
+// Fuente: https://kotlinlang.org/docs/basic-syntax.html#variables
 
 - #warning_symb `val` hace que la *referencia* sea inmutable, pero no el objeto en sí:
 
@@ -241,6 +246,7 @@ persona = Persona(nombre = "Luis")  // Error: no se puede reasignar
 - Esto es idéntico al comportamiento de `final` en Java.
 
 == Inferencia de Tipos
+// Fuente: https://kotlinlang.org/docs/basic-syntax.html#variables
 
 - Kotlin tiene *inferencia de tipos*: el compilador deduce el tipo automáticamente.
 
@@ -261,6 +267,7 @@ var sinValor: Int         // Error: debe inicializarse
 - #warning_symb Las variables *siempre* deben inicializarse (con `val` o `var`).
 
 == Tipos Básicos
+// Fuente: https://kotlinlang.org/docs/types-overview.html
 
 #v(0.5em)
 
@@ -287,6 +294,7 @@ Los tipos básicos en Kotlin son similares a Java, pero *siempre son objetos* (n
 ---
 
 == Conversión de Tipos
+// Fuente: https://kotlinlang.org/docs/numbers.html#explicit-number-conversions
 
 - *No hay conversiones implícitas* entre tipos numéricos (a diferencia de Java):
 
@@ -309,6 +317,7 @@ val flotante = 42.5F   // Float
 ```
 
 == String Templates
+// Fuente: https://kotlinlang.org/docs/strings.html#string-templates
 
 - Kotlin permite *interpolar variables y expresiones* dentro de strings:
 
@@ -338,6 +347,7 @@ println("Longitud del nombre: ${nombre.length}")
 = Colecciones
 
 == Listas
+// Fuente: https://kotlinlang.org/docs/collections-overview.html#list
 
 - *Lista ordenada* de elementos. Permite duplicados.
 
@@ -358,6 +368,7 @@ println(numeros)  // [2, 3, 4]
 ---
 
 == Conjuntos (Sets)
+// Fuente: https://kotlinlang.org/docs/collections-overview.html#set
 
 - Colección de elementos *únicos* y sin orden garantizado.
 
@@ -375,6 +386,7 @@ println(letras)  // [a, b, c]
 ```
 
 == Mapas
+// Fuente: https://kotlinlang.org/docs/collections-overview.html#map
 
 - Colección de *pares clave-valor*. Las claves son únicas.
 
@@ -393,6 +405,7 @@ println(notas)  // {Luis=8.0}
 ```
 
 == Colecciones: Read-Only vs Mutable
+// Fuente: https://kotlinlang.org/docs/collections-overview.html#collection-types
 
 - Kotlin distingue entre colecciones de *solo lectura* y *mutables*:
 
@@ -427,6 +440,7 @@ val edades: Map<String, Int> = mapOf("Ana" to 25)  // explícito
 = Control de Flujo
 
 == `if` como Expresión
+// Fuente: https://kotlinlang.org/docs/control-flow.html
 
 - En Kotlin, `if` puede usarse como *expresión* que devuelve un valor:
 
@@ -447,6 +461,7 @@ val resultado = if (x > 0) "Positivo" else "Negativo"
 - Cuando se usa como expresión, la rama `else` es *obligatoria*.
 
 == `when` --- Sustituto de `switch`
+// Fuente: https://kotlinlang.org/docs/control-flow.html#when-expressions-and-statements
 
 - `when` es mucho más potente que el `switch` de Java:
 
@@ -467,6 +482,7 @@ fun describe(obj: Any): String = when (obj) {
 ---
 
 == `when` sin Sujeto
+// Fuente: https://kotlinlang.org/docs/control-flow.html#when-expressions-and-statements
 
 - `when` también se puede usar *sin sujeto*, como alternativa a cadenas de `if-else`:
 
@@ -483,6 +499,7 @@ val sensacion = when {
 ```
 
 == Rangos
+// Fuente: https://kotlinlang.org/docs/ranges.html
 
 - Kotlin tiene soporte nativo para *rangos*, que crean objetos `IntRange`, `LongRange`, `CharRange`, etc.:
 
@@ -501,6 +518,7 @@ val pares = 0..10 step 2    // 0, 2, 4, 6, 8, 10
 ```
 
 == Bucles: `for`
+// Fuente: https://kotlinlang.org/docs/control-flow.html#for-loops
 
 - `for` itera sobre cualquier cosa que proporcione un iterador:
 
@@ -525,6 +543,7 @@ for ((indice, fruta) in frutas.withIndex()) {
 ---
 
 == Bucles: `while` y `do-while`
+// Fuente: https://kotlinlang.org/docs/control-flow.html#while-loops
 
 - Funcionan igual que en Java:
 
@@ -552,6 +571,7 @@ do {
 = Funciones
 
 == Declaración de Funciones
+// Fuente: https://kotlinlang.org/docs/functions.html
 
 - Las funciones se declaran con la palabra clave `fun`:
 
@@ -575,6 +595,7 @@ fun imprimir(mensaje: String): Unit {
 ```
 
 == Funciones de una Sola Expresión
+// Fuente: https://kotlinlang.org/docs/functions.html#single-expression-functions
 
 - Si el cuerpo de una función es una sola expresión, se pueden omitir las llaves y el `return`:
 
@@ -595,6 +616,8 @@ fun maximo(a: Int, b: Int) = if (a > b) a else b
 ```
 
 == Argumentos con Nombre y Valores por Defecto
+// Fuente: https://kotlinlang.org/docs/functions.html#named-arguments
+// Fuente: https://kotlinlang.org/docs/functions.html#parameters-with-default-values
 
 - Se pueden especificar los *nombres de los argumentos* al llamar a una función:
 
@@ -621,6 +644,7 @@ saludar("Ana", "Buenos días")  // Buenos días, Ana!
 ---
 
 == Varargs
+// Fuente: https://kotlinlang.org/docs/functions.html#variable-number-of-arguments-varargs
 
 - Con `vararg` se pueden pasar un *número variable de argumentos*:
 
@@ -637,6 +661,7 @@ imprimirTodo(*palabras)
 ```
 
 == Expresiones Lambda
+// Fuente: https://kotlinlang.org/docs/lambdas.html
 
 - Las *lambdas* son funciones anónimas que se pueden almacenar en variables y pasar como argumento:
 
@@ -656,6 +681,7 @@ val dobles = numeros.map { it * 2 }             // [2, 4, 6, 8, 10]
 ---
 
 == Trailing Lambdas
+// Fuente: https://kotlinlang.org/docs/lambdas.html#passing-trailing-lambdas
 
 - Cuando el *último parámetro* de una función es una lambda, se puede sacar fuera de los paréntesis:
 
@@ -693,6 +719,7 @@ view.setOnClickListener { toast("Click") }
 = Clases
 
 == Declaración de Clases
+// Fuente: https://kotlinlang.org/docs/classes.html
 
 - Una clase básica en Kotlin:
 
@@ -717,6 +744,7 @@ p.presentarse()     // Soy Ana y tengo 26 años
 ---
 
 == Contenido de una Clase
+// Fuente: https://kotlinlang.org/docs/classes.html
 
 ```kotlin
 class Persona(val nombre: String) {
@@ -736,6 +764,7 @@ El cuerpo de una clase `{ }` puede contener:
 ---
 
 == Constructor y Bloque `init`
+// Fuente: https://kotlinlang.org/docs/classes.html#constructors-and-initializer-blocks
 
 - El *constructor primario* se define en la cabecera de la clase.
 - El bloque `init` es el *cuerpo del constructor primario* (se ejecuta *siempre* que se crea una instancia):
@@ -756,6 +785,7 @@ class Persona(val nombre: String, var edad: Int) {
 ---
 
 == Constructores Secundarios
+// Fuente: https://kotlinlang.org/docs/classes.html#constructors-and-initializer-blocks
 
 #[
   #set text(size: 0.94em)
@@ -783,6 +813,7 @@ class Persona(val nombre: String, var edad: Int) {
 ]
 
 == Propiedades: Custom Getters y Setters
+// Fuente: https://kotlinlang.org/docs/properties.html
 
 - Kotlin genera _getters_ y _setters_ automáticos, pero se pueden personalizar:
 
@@ -800,6 +831,7 @@ println(r.area)  // 12.0
 ---
 
 == Propiedades: Custom Setters y `field`
+// Fuente: https://kotlinlang.org/docs/properties.html#custom-getters-and-setters
 
 - Para _setters_ personalizados se usa `field` para acceder al _backing field_ (el valor almacenado):
 
@@ -820,6 +852,7 @@ println(u.email)  // ana@email.com
 - #warning_symb Usar `this.email = ...` dentro del setter causaría recursión infinita. Por eso existe `field`.
 
 == Data Classes
+// Fuente: https://kotlinlang.org/docs/data-classes.html
 
 - Las *data classes* generan automáticamente: `toString()`, `equals()`, `hashCode()`, `copy()`...
 
@@ -873,6 +906,7 @@ println(p3)           // Persona(nombre=Ana, edad=26)
 = Herencia e Interfaces
 
 == Herencia de Clases
+// Fuente: https://kotlinlang.org/docs/inheritance.html
 
 #[
   #set text(size: 0.9em)
@@ -904,6 +938,7 @@ println(p3)           // Persona(nombre=Ana, edad=26)
 ---
 
 == Clases Abstractas
+// Fuente: https://kotlinlang.org/docs/classes.html#abstract-classes
 
 - Las clases abstractas no se pueden instanciar directamente:
 
@@ -925,6 +960,7 @@ c.describir()  // Círculo: área = 78.53981633974483
 ```
 
 == Interfaces
+// Fuente: https://kotlinlang.org/docs/interfaces.html
 
 - Las interfaces se declaran de forma similar a Java, pero pueden incluir *implementaciones por defecto*:
 
@@ -947,6 +983,7 @@ class Cuadrado(val lado: Double) : Figura("Cuadrado"), Dibujable {
 - Una clase puede implementar *múltiples interfaces* pero solo heredar de *una clase*.
 
 == Modificadores de Visibilidad
+// Fuente: https://kotlinlang.org/docs/visibility-modifiers.html
 
 #v(0.5em)
 
@@ -976,6 +1013,7 @@ class Cuadrado(val lado: Double) : Figura("Cuadrado"), Dibujable {
 = Null Safety
 
 == El Problema del Null
+// Fuente: https://kotlinlang.org/docs/null-safety.html
 
 #v(0.5em)
 
@@ -997,6 +1035,7 @@ class Cuadrado(val lado: Double) : Figura("Cuadrado"), Dibujable {
 ---
 
 == Tipos Nullable vs Non-Nullable
+// Fuente: https://kotlinlang.org/docs/null-safety.html#nullable-types-and-non-nullable-types
 
 - Por defecto, las variables *no pueden ser null*:
 
@@ -1020,6 +1059,7 @@ println(nombre.length)  // Error: nombre puede ser null
 ```
 
 == Safe Call (`?.`)
+// Fuente: https://kotlinlang.org/docs/null-safety.html#safe-call-operator
 
 - El operador *safe call* (`?.`) accede a un miembro solo si el objeto no es null. Si es null, devuelve null:
 
@@ -1037,6 +1077,7 @@ val ciudad: String? = usuario?.direccion?.ciudad
 ```
 
 == Operador Elvis (`?:`)
+// Fuente: https://kotlinlang.org/docs/null-safety.html#elvis-operator
 
 - El operador *Elvis* (`?:`) proporciona un *valor por defecto* cuando la expresión es null:
 
@@ -1060,6 +1101,7 @@ fun obtenerNombre(usuario: Usuario?): String {
 ---
 
 == Non-Null Assertion (`!!`)
+// Fuente: https://kotlinlang.org/docs/null-safety.html#not-null-assertion-operator
 
 - El operador `!!` *fuerza* el acceso sin verificar null. Si el valor es null, lanza una excepción:
 
@@ -1080,6 +1122,7 @@ println(nombre!!.length)  // NullPointerException
 - Se recomienda usar `?.` con `?:` en lugar de `!!` siempre que sea posible.
 
 == Smart Casts
+// Fuente: hthttps://kotlinlang.org/docs/typecasts.html#smart-casts
 
 - Kotlin realiza *smart casts*: después de comprobar que un valor no es null, se puede usar directamente sin operadores especiales:
 
@@ -1108,6 +1151,7 @@ fun describir(x: Any): String = when (x) {
 // ============================================================================
 
 == Operadores de Igualdad
+// Fuente: https://kotlinlang.org/docs/equality.html
 
 - Kotlin tiene *dos operadores de comparación*:
 
@@ -1142,6 +1186,7 @@ println(set1 === set2)  // false (objetos distintos)
 = Apéndice
 
 == Clases Sealed
+// Fuente: https://kotlinlang.org/docs/sealed-classes.html
 
 - Las *sealed classes* restringen la jerarquía de herencia a un conjunto conocido de subtipos:
 
@@ -1166,6 +1211,7 @@ fun manejar(r: Resultado) = when (r) {
 ---
 
 == Enum Classes
+// Fuente: https://kotlinlang.org/docs/enum-classes.html
 
 #[
   #set text(0.85em)
@@ -1197,6 +1243,7 @@ fun manejar(r: Resultado) = when (r) {
 ]
 
 == Object Declarations (Singleton)
+// Fuente: https://kotlinlang.org/docs/object-declarations.html
 
 - La palabra clave `object` crea un *singleton* (una clase con una única instancia, creada automáticamente).
 - Se usa para configuración global, utilidades, o implementar interfaces con una sola instancia:
@@ -1218,6 +1265,7 @@ println(Configuracion.resumen())  // Idioma: en, Oscuro: false
 ---
 
 == Companion Objects
+// Fuente: https://kotlinlang.org/docs/object-declarations.html#companion-objects
 
 - Los *companion objects* definen miembros asociados a la clase, no a una instancia. Es lo más parecido a `static` en Java:
 
@@ -1238,6 +1286,7 @@ println(t.grados)  // 37.0
 - Se acceden a través del nombre de la clase, sin necesidad de crear una instancia.
 
 == Genéricos
+// Fuente: https://kotlinlang.org/docs/generics.html
 
 - Kotlin soporta *genéricos*, similares a los de Java, para crear clases y funciones que operan sobre tipos parametrizados:
 
@@ -1255,6 +1304,7 @@ println(cajaString.obtener())    // Hola
 ---
 
 == Funciones Genéricas
+// Fuente: https://kotlinlang.org/docs/generics.html
 
 - Las funciones también pueden tener parámetros de tipo:
 
@@ -1281,6 +1331,7 @@ println(maximo("abc", "xyz")) // xyz
 ---
 
 == Varianza: `in` y `out`
+// Fuente: https://kotlinlang.org/docs/generics.html#variance
 
 - Kotlin hace explícita la *varianza* de los genéricos con `in` y `out`:
 
@@ -1310,6 +1361,7 @@ interface Destino<in T> {
 - Esto permite que `Fuente<String>` sea subtipo de `Fuente<Any>` (_covarianza_).
 
 == Extension Functions
+// Fuente: https://kotlinlang.org/docs/extensions.html
 
 - Las *funciones de extensión* permiten añadir nuevas funciones a clases existentes sin modificar su código fuente:
 
@@ -1326,6 +1378,7 @@ println("Hola mundo Kotlin".palabras())  // 3
 ---
 
 == Extension Properties
+// Fuente: https://kotlinlang.org/docs/extensions.html#extension-properties
 
 - De forma similar, se pueden añadir *propiedades de extensión*:
 
@@ -1339,6 +1392,7 @@ println("Kotlin".primeraLetra)  // K
 - Las _extension properties_ no pueden tener _backing field_, solo _custom getters_.
 
 == Scope Functions: `let`, `apply`, `run`, `also`, `with`
+// Fuente: https://kotlinlang.org/docs/scope-functions.html
 
 Las _scope functions_ crean un ámbito temporal para operar sobre un objeto:
 
@@ -1361,6 +1415,7 @@ Las _scope functions_ crean un ámbito temporal para operar sobre un objeto:
 ---
 
 == Scope Functions: Ejemplos
+// Fuente: https://kotlinlang.org/docs/scope-functions.html
 
 ```kotlin
 // let: comúnmente usado para null checks
@@ -1382,6 +1437,7 @@ val numeros = mutableListOf(1, 2, 3)
 ```
 
 == Excepciones
+// Fuente: https://kotlinlang.org/docs/exceptions.html
 
 - Las excepciones en Kotlin funcionan de forma casi idéntica a Java:
 
