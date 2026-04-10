@@ -1534,7 +1534,7 @@ Compose proporciona _scaffolds_ para cada canonical layout. Ejemplo de list-deta
   - *`resizeableActivity = false`*: impedir el modo multi-ventana.
   - *`minAspectRatio` / `maxAspectRatio`*: limitar la proporción. Podía generar bandas negras.
 
-  A partir de *Android 16* (API 36), el sistema *ignora* estos atributos en dispositivos con *smallest width ≥ 600 dp* y estira la app para ocupar toda la pantalla. A partir de *API 37* no será posible desactivar este comportamiento.
+  A partir de Android 16 (API 36), el sistema ignora estos atributos en dispositivos con smallest width ≥ 600 dp y estira la app para ocupar toda la pantalla. A partir de API 37 no será posible desactivar este comportamiento.
 ][
   #block(
     fill: rgb("#fff2df"),
