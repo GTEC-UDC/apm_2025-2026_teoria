@@ -100,6 +100,7 @@
 = Introducción a Android
 
 == ¿Qué es una aplicación Android?
+// Fuente: https://developer.android.com/guide/components/fundamentals
 
 - Una app Android se distribuye como un archivo *APK* (_Android Package_): contiene todo lo necesario para instalar y ejecutar la app en un dispositivo.
 
@@ -112,6 +113,7 @@
 ---
 
 == Arquitectura de la Plataforma Android
+// Fuente: https://developer.android.com/guide/platform
 
 #grid(
   columns: (1fr, 35%),
@@ -133,6 +135,7 @@
 = Componentes de Aplicaciones Android
 
 == Los 4 Componentes de una App Android
+// Fuente: https://developer.android.com/guide/components/fundamentals
 
 Las apps Android se construyen a partir de 4 tipos de *componentes*:
 
@@ -182,6 +185,7 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 ---
 
 == Activities
+// Fuente: https://developer.android.com/guide/components/activities/intro-activities
 
 - Una *Activity* es el componente que representa una *única pantalla* con interfaz de usuario.
 
@@ -203,6 +207,7 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 ---
 
 == El `AndroidManifest.xml`
+// Fuente: https://developer.android.com/guide/topics/manifest/manifest-intro
 
 - Cada app tiene un fichero *`AndroidManifest.xml`* en la raíz del proyecto Android.
 
@@ -216,6 +221,7 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 ---
 
 == Declarar una Activity en el Manifest
+// Fuente: https://developer.android.com/guide/components/activities/intro-activities#ctm
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -243,6 +249,7 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 = Ciclo de Vida de Activities
 
 == ¿Qué es el Ciclo de Vida?
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
 
 - En Android, una *Activity* es el componente que proporciona la pantalla con la que el usuario interactúa.
 
@@ -264,6 +271,7 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 ---
 
 == Analogía: Ciclo de Vida Natural
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -286,6 +294,7 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 = Estados y Callbacks del Ciclo de Vida
 
 == Diagrama del Ciclo de Vida
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
 
 #grid(
   columns: (1fr, 40%),
@@ -309,6 +318,8 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 ---
 
 == Estados del Ciclo de Vida (`Lifecycle.State`)
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 35%),
@@ -328,6 +339,8 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 ---
 
 == `onCreate()`
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -352,6 +365,8 @@ Ejemplo: al pulsar "Compartir" en una app, se envía un Intent con la acción `A
 ---
 
 == `onCreate()` --- Código
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 ```kotlin
 class MainActivity : ComponentActivity() {
@@ -372,6 +387,8 @@ class MainActivity : ComponentActivity() {
 - `setContent { }` define la UI usando Jetpack Compose.
 
 == `onStart()`
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -393,6 +410,8 @@ class MainActivity : ComponentActivity() {
 )
 
 == `onResume()`
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -418,6 +437,8 @@ class MainActivity : ComponentActivity() {
 ---
 
 == `onPause()`
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 
 #grid(
@@ -440,6 +461,8 @@ class MainActivity : ComponentActivity() {
 )
 
 == `onStop()`
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -462,6 +485,8 @@ class MainActivity : ComponentActivity() {
 ---
 
 == `onRestart()`
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -479,6 +504,8 @@ class MainActivity : ComponentActivity() {
 )
 
 == `onDestroy()`
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -508,6 +535,7 @@ class MainActivity : ComponentActivity() {
 = Secuencia de Callbacks
 
 == Visión Completa de los Callbacks
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 40%),
@@ -532,6 +560,7 @@ class MainActivity : ComponentActivity() {
 ---
 
 == Implementación de los Callbacks
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #[
   #set text(size: 0.82em)
@@ -586,6 +615,7 @@ class MainActivity : ComponentActivity() {
 = Escenarios del Ciclo de Vida
 
 == Escenario 1: Abrir y Cerrar la App
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -609,6 +639,7 @@ class MainActivity : ComponentActivity() {
 ---
 
 == Escenario 1: Log
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -633,6 +664,7 @@ class MainActivity : ComponentActivity() {
 )
 
 == Escenario 2: Ir a Home y Volver
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -656,6 +688,7 @@ class MainActivity : ComponentActivity() {
 ---
 
 == Escenario 2: Log
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -687,6 +720,7 @@ class MainActivity : ComponentActivity() {
 
 
 == Escenario 3: Activity Parcialmente Oculta
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -726,6 +760,7 @@ class MainActivity : ComponentActivity() {
 ---
 
 == Escenario 3: Log
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 45%),
@@ -764,6 +799,7 @@ class MainActivity : ComponentActivity() {
 )
 
 == Visibilidad vs Foco
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
 
 #v(0.5em)
 
@@ -792,6 +828,7 @@ class MainActivity : ComponentActivity() {
 = Cambios de Configuración
 
 == ¿Qué es un Cambio de Configuración?
+// Fuente: https://developer.android.com/guide/topics/resources/runtime-changes
 
 - Un *cambio de configuración* ocurre cuando el estado del dispositivo cambia de forma tan radical que el sistema considera más fácil *destruir y recrear* la Activity.
 
@@ -806,6 +843,7 @@ class MainActivity : ComponentActivity() {
 ---
 
 == Rotación del Dispositivo
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #grid(
   columns: (1fr, 35%),
@@ -831,6 +869,7 @@ class MainActivity : ComponentActivity() {
 ---
 
 == Rotación del Dispositivo: Log
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 ```
 // App en funcionamiento:
@@ -859,6 +898,7 @@ onResume Called
 = Preservar el Estado
 
 == El Problema de la Pérdida de Estado
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 - Cuando la Activity se destruye y recrea (ej: rotación), *todo el estado se pierde*:
   - Variables locales se reinicializan.
@@ -870,6 +910,7 @@ onResume Called
 ---
 
 == Estado en Compose: Recomposición
+// Fuente: https://developer.android.com/develop/ui/compose/state
 
 - En Jetpack Compose, la *composición* es el proceso de ejecutar funciones `@Composable` para construir la UI.
 
@@ -893,6 +934,7 @@ onResume Called
 ]
 
 == `remember` vs `rememberSaveable`
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 - `remember` guarda el valor durante las *recomposiciones*, pero lo pierde ante un cambio de configuración:
 
@@ -915,6 +957,7 @@ var revenue by rememberSaveable { mutableStateOf(0) }
 ---
 
 == Muerte del Proceso
+// Fuente: https://developer.android.com/topic/libraries/architecture/saving-states
 
 - El sistema Android puede *matar el proceso* de una app en segundo plano si necesita liberar recursos.
 
@@ -938,6 +981,7 @@ var revenue by rememberSaveable { mutableStateOf(0) }
 = Resumen
 
 == Resumen de Callbacks y su Uso
+// Fuente: https://developer.android.com/guide/components/activities/activity-lifecycle
 
 #v(0.3em)
 
@@ -967,6 +1011,7 @@ var revenue by rememberSaveable { mutableStateOf(0) }
 ---
 
 == Escenarios Resumidos
+// Fuente: https://developer.android.com/codelabs/basic-android-kotlin-compose-activity-lifecycle
 
 #v(0.5em)
 
@@ -991,6 +1036,7 @@ var revenue by rememberSaveable { mutableStateOf(0) }
 ]
 
 == Preservación de Estado: Resumen
+// Fuente: https://developer.android.com/topic/libraries/architecture/saving-states
 
 #v(0.5em)
 
