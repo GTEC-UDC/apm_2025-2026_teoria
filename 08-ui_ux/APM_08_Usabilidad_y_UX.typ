@@ -757,51 +757,70 @@ _Ejemplo:_ LinkedIn (2015). Durante el registro, un paso solicitaba acceso al em
 ]
 
 
+== Dark Theme
+
+A partir de Android 10, el sistema ofrece un tema oscuro global. El usuario lo activa en *Ajustes → Pantalla → Tema oscuro*.
+
+#grid(
+  columns: (1fr, 1.2fr),
+  column-gutter: 1.5em,
+  align: top,
+)[
+
+  *Beneficios:*
+  - *Baja luminosidad*: más cómodo en entornos con poca luz
+  - *Accesibilidad*: mejora la visibilidad para usuarios con baja visión o sensibilidad a la luz
+  - *Batería*: en pantallas OLED, los píxeles oscuros consumen menos energía
+
+][
+  #figure(
+    image("images/google_dark_theme.png", width: 100%),
+    caption: text(size: 0.95em)[Modo claro (izquierda) y modo oscuro (derecha).],
+  )
+]
+
+*En Compose:* se definen dos esquemas (`lightColorScheme()` / `darkColorScheme()`) y se selecciona con `isSystemInDarkTheme()`.
+
+
 == Esquema de colores
 
 #grid(
   columns: (1fr, 0.9fr),
   column-gutter: 1.5em,
-  align: top,
 )[
-  - El esquema se genera a partir de *5 colores clave de entrada*: Primary, Secondary, Tertiary, Error, y Neutral
+  Un *esquema* de colores agrupa los $~$25 roles de color que usan los componentes (`primary`, `onPrimary`, `surface`, `outline`...) en modo claro y oscuro.
 
-  - Cada color clave genera una *paleta tonal de 13 tonos*. De las paletas se derivan los *roles de color* usados por los componentes ($~$25 en total)
+  - #link("https://m3.material.io/theme-builder")[Material Theme Builder]: herramienta oficial para generar un esquema de colores a partir de unos pocos colores clave.
 
-  - M3 ofrece funciones para generar esquemas claros y oscuros: `lightColorScheme()` / `darkColorScheme()`
-
-  - Herramienta #link("https://m3.material.io/theme-builder")[Material Theme Builder]: genera esquemas completos a partir de colores de marca y exporta código Compose
+  - Alternativa en runtime: Dynamic Color (Android 12+), el sistema genera el esquema a partir del fondo de pantalla del usuario.
 ][
   #figure(
     image("images/m3-light.png", width: 100%),
-    caption: align(
-      left,
-    )[Ejemplo de roles de un esquema de color claro. El color clave Neutro se usa para generar los roles de salida `background`, `surface`, y `outline`.],
+    caption: [Ejemplo de esquema de colores claro generado con Material Theme Builder.],
   )
 ]
 
 
 == Roles de color
 
-Cada color clave tiene roles semánticos con variantes _container_ y _on-color_.
+Los roles se agrupan en familias. Cada familia sigue el mismo patrón: un color base, su variante `container` más suave, y sus pares `on-*` para el contenido encima. // P.ej. la familia _Primary_ incluye: `primary`, `onPrimary`, `primaryContainer`, `onPrimaryContainer`.
 
 #grid(
   columns: (1fr, 1.4fr),
   column-gutter: 1.5em,
   align: top,
 )[
-  - *Primary*: componentes principales (acciones, botones, indicadores de estado activo)
-  - *Secondary*: componentes secundarios (menor énfasis que primary)
-  - *Tertiary*: acentos y contraste para dar variedad cromática
+  - *Primary*: componentes principales (acciones, botones, estados activos)
+  - *Secondary*: componentes secundarios (menor énfasis)
+  - *Tertiary*: acentos y variedad cromática
   - *Error*: estados de error y validación fallida
-  - *Surface / Background*: fondos de componentes y de la app
-
-  // Ejemplo: un `Card` seleccionado usa `primaryContainer` como fondo y `onPrimaryContainer` para el texto.
+  - *Neutral*: fondos y bordes (`background`, `surface`, `outline`...)
 ][
   #figure(
-    image("images/m3-container.png", width: 100%),
+    image("images/m3-container.png", width: 95%),
     caption: [
-      Ejemplo: componente con roles `primaryContainer` para el fondo y `onPrimaryContainer` para el texto.
+      Ejemplo de roles de color en un componente.
+      // Componente usando los roles `primaryContainer` y `onPrimaryContainer`.
     ],
   )
 ]
@@ -916,31 +935,6 @@ Cada color clave tiene roles semánticos con variantes _container_ y _on-color_.
   Text(text = "Hola", color = MaterialTheme.colorScheme.primary)
   ```
 ]
-
-
-== Dark Theme
-
-A partir de Android 10, el sistema ofrece un tema oscuro global. El usuario lo activa en *Ajustes → Pantalla → Tema oscuro*.
-
-#grid(
-  columns: (1fr, 1.2fr),
-  column-gutter: 1.5em,
-  align: top,
-)[
-
-  *Beneficios:*
-  - *Baja luminosidad*: más cómodo en entornos con poca luz
-  - *Accesibilidad*: mejora la visibilidad para usuarios con baja visión o sensibilidad a la luz
-  - *Batería*: en pantallas OLED, los píxeles oscuros consumen menos energía
-
-][
-  #figure(
-    image("images/google_dark_theme.png", width: 100%),
-    caption: text(size: 0.95em)[Modo claro (izquierda) y modo oscuro (derecha).],
-  )
-]
-
-*En Compose:* se definen dos esquemas (`lightColorScheme()` / `darkColorScheme()`) y se selecciona con `isSystemInDarkTheme()`.
 
 
 == Dynamic Color
