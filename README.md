@@ -5,7 +5,7 @@ Diapositivas de teoría de la asignatura **Arquitecturas y Plataformas Móviles 
 ## Contenidos
 
 | Tema | Título |
-|------|--------|
+| ---- | ------ |
 | 02 | [Introducción a Kotlin](02-kotlin/) |
 | 03 | [Ciclo de vida](03-ciclo_vida/) |
 | 04 | [Navegación](04-navegacion/) |
