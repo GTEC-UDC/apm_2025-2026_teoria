@@ -1,6 +1,6 @@
 # Arquitecturas y Plataformas Móviles — Diapositivas de teoría (Curso 2025/2026)
 
-Diapositivas de teoría de la asignatura **Arquitecturas y Plataformas Móviles (APM)** del [Máster Universitario en Ingeniería Informática](https://estudos.udc.es/es/study/start/4523V01) de la [Universidade da Coruña](https://www.udc.es/) (UDC). Curso 2025/2026.
+Diapositivas de teoría de la asignatura **Arquitecturas y Plataformas Móviles (APM)** del [Máster Universitario en Ingeniería Informática](https://estudos.udc.es/es/study/start/4502v02) de la [Universidade da Coruña](https://www.udc.es/) (UDC). Curso 2025/2026.
 
 ## Contenidos
 
