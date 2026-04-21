@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="35.175938mm"
+   height="16.706249mm"
+   viewBox="0 0 35.175938 16.706249"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="camera-toogle.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.71268238"
+     inkscape:cx="298.87087"
+     inkscape:cy="461.63622"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-25.812917,-26.517919)">
+    <rect
+       style="display:inline;fill:#d6ec87;fill-opacity:1;stroke:none;stroke-width:0.47625;stroke-linejoin:round;paint-order:fill markers stroke"
+       id="rect4"
+       width="35.175938"
+       height="16.706249"
+       x="25.812916"
+       y="26.51792"
+       ry="5.4754567" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.47625;stroke-linejoin:round;paint-order:fill markers stroke"
+       x="34.349712"
+       y="33.905407"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="fill:#000000;stroke-width:0.47625"
+         x="34.349712"
+         y="33.905407">Camera access</tspan></text>
+    <path
+       d="m 29.418446,36.123667 q -0.131634,0 -0.225372,-0.0937 -0.09374,-0.0937 -0.09374,-0.22537 v -1.91467 q 0,-0.13163 0.09374,-0.22537 0.09374,-0.0937 0.225372,-0.0937 h 1.914666 q 0.131634,0 0.225374,0.0937 0.09374,0.0937 0.09374,0.22537 v 0.71801 l 0.638221,-0.63822 v 1.75511 l -0.638221,-0.63823 v 0.718 q 0,0.13163 -0.09374,0.22537 -0.09374,0.0937 -0.225374,0.0937 z m 0,-0.31912 h 1.914666 v -1.91466 h -1.914666 z m 0,0 v -1.91466 z"
+       id="path1"
+       style="stroke-width:0.00398889" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#494b3e;fill-opacity:1;stroke:none;stroke-width:0.47625;stroke-linejoin:round;paint-order:fill markers stroke"
+       x="34.477612"
+       y="37.648632"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="font-size:2.64583px;fill:#494b3e;fill-opacity:1;stroke-width:0.47625"
+         x="34.477612"
+         y="37.648632">Available</tspan></text>
+  </g>
+</svg>
