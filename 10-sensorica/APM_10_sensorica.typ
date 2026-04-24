@@ -1,5 +1,5 @@
 // ============================================================================
-// Sensorización
+// Sensórica
 // Arquitecturas y Plataformas Móviles (APM)
 // Máster Universitario en Ingeniería Informática - Universidade da Coruña
 // Curso 2025/2026
@@ -11,7 +11,7 @@
 #show: gtec-simple-theme.with(
   aspect-ratio: "16-9",
   ty.config-info(
-    title: [Sensorización],
+    title: [Sensórica],
     author: [Tomás Domínguez Bolaño],
     date: [Curso 2025/2026 --- 2º Cuatrimestre],
   ),
@@ -860,14 +860,13 @@ Miden magnitudes físicas del entorno. Son siempre hardware y devuelven un únic
 
 #table(
   columns: (auto, 1fr, auto),
-  inset: (x: 10pt, y: 9pt),
+  inset: (x: 10pt, y: 12pt),
   align: (left, left, center),
   table.header([*Sensor*], [*Constante de Android*], [*Unidades*]),
   [Luz ambiente], [`TYPE_LIGHT`], [lx],
   [Presión atmosférica], [`TYPE_PRESSURE`], [hPa (mbar)],
   [Temperatura ambiente], [`TYPE_AMBIENT_TEMPERATURE`], [°C],
-  [Humedad relativa], [`TYPE_RELATIVE_HUMIDITY`], [%],
-  [Temperatura dispositivo (_deprecated_)], [`TYPE_TEMPERATURE`], [°C],
+  [Humedad relativa], [`TYPE_RELATIVE_HUMIDITY`], [%]
 )
 
 #block(fill: rgb("#fff2df"), width: 100%, inset: 12pt, radius: 5pt)[
@@ -1290,6 +1289,10 @@ A partir de Android 9 (API 28), una app en segundo plano tiene acceso limitado a
   *Solución*: usar un *_foreground service_* (con notificación persistente) cuando la app necesite leer sensores durante un período prolongado (p. ej., apps de fitness que siguen contando pasos al bloquear la pantalla).
 ]
 
+#block(fill: luma(94%), width: 100%, inset: 12pt, radius: 5pt)[
+  *Importante*: Esta restricción afecta a la entrega de eventos (callbacks), no al hardware. Si la app sigue registrada, el sensor puede seguir activo y consumir batería. Por eso sigue siendo necesario desregistrar el _listener_ en `onPause()`.
+]
+
 
 == Límite de frecuencia de muestreo (Android 12+)
 
@@ -1366,7 +1369,4 @@ Para solicitar frecuencias mayores, hay que declarar un permiso normal en el _ma
 - #link("https://developer.android.com/develop/sensors-and-location/sensors/sensors_position", [Position sensors])
 
 - #link("https://developer.android.com/develop/sensors-and-location/sensors/sensors_environment", [Environment sensors])
-
-- #link("https://developer.android.com/develop/sensors-and-location/sensors/gnss", [Raw GNSS measurements])
-
 
