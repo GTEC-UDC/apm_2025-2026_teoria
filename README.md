@@ -13,8 +13,8 @@ Diapositivas de teoría de la asignatura **Arquitecturas y Plataformas Móviles 
 | 06 | [Geolocalización](06-geolocalizacion/) |
 | 07 | [Almacenamiento](07-almacenamiento/) |
 | 08 | [Usabilidad, UX y UI](08-ui_ux/) |
-| 09 | Multimedia *(pendiente)* |
-| 10 | Sensórica *(pendiente)* |
+| 09 | [Multimedia](09-multimedia) |
+| 10 | [Sensórica](10-sensorica) |
 
 Cada tema está en su propio directorio e incluye:
 
