@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.0"
+   width="419.80225"
+   height="373.51346"
+   id="svg2"
+   sodipodi:docname="acceleration_meter.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="0.53399052"
+     inkscape:cx="-271.5404"
+     inkscape:cy="18.726924"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       style="overflow:visible"
+       id="Arrow2Mend">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6)"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path12979" />
+    </marker>
+    <pattern
+       id="pattern4136"
+       patternTransform="translate(238.07143,131.86218)"
+       height="10.97436"
+       width="6.7587"
+       patternUnits="userSpaceOnUse">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 0.5,0.5 L 6.2587,10.47436"
+         id="path4134" />
+    </pattern>
+  </defs>
+  <g
+     id="g13234"
+     transform="translate(-228.48504,-132.74993)">
+    <path
+       d="M 230.37054,211.70089 V 427.73214 H 646.40179 V 211.70089 Z m 9.90625,9.90625 h 396.25 v 196.21875 h -396.25 z"
+       style="fill:#b4b4b4;fill-opacity:1;stroke:#000000;stroke-width:3.771;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2160" />
+    <g
+       id="g7">
+      <rect
+         width="81.221916"
+         height="187.85713"
+         x="397.77521"
+         y="225.78795"
+         style="fill:#b4b4b4;fill-opacity:1;stroke:#000000;stroke-width:3.771;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect6079" />
+      <text
+         xml:space="preserve"
+         style="font-size:42.6667px;line-height:0.8;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+         x="-322.38318"
+         y="435.87994"
+         id="text9"
+         transform="rotate(-90)"><tspan
+           sodipodi:role="line"
+           id="tspan9"
+           x="-322.38318"
+           y="435.87994"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.6667px;line-height:0.8;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman,  Bold';fill:#000000">Proof</tspan><tspan
+           sodipodi:role="line"
+           x="-322.38318"
+           y="470.50308"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.6667px;line-height:0.8;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman,  Bold';fill:#000000"
+           id="tspan10">mass</tspan></text>
+    </g>
+    <g
+       id="g13230">
+      <path
+         d="m 240.41631,318.23382 h 28.19016 l 10.0604,-17.42513 9.67644,36.11295 9.67643,-36.11295 9.67644,36.11295 9.67643,-36.11295 9.67644,36.11295 9.67644,-36.11295 9.67643,36.11295 9.67644,-36.11295 9.94413,17.22374 h 31.75272"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path10964"
+         sodipodi:nodetypes="ccccccccccccc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.6667px;line-height:1;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#000000;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+         x="292.95978"
+         y="287.2471"
+         id="text6"><tspan
+           sodipodi:role="line"
+           id="tspan6"
+           x="292.95978"
+           y="287.2471"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.6667px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000">K</tspan></text>
+    </g>
+    <g
+       id="g13222">
+      <g
+         id="g11974">
+        <path
+           d="m 558.36314,281.53532 h 29.45535 v 74.91222 h -29.45535"
+           style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path6083"
+           sodipodi:nodetypes="cccc" />
+        <path
+           d="m 573.09081,300.80868 v 36.36549"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path8994"
+           sodipodi:nodetypes="cc" />
+        <path
+           d="M 572.58575,318.99143 H 478.99712"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path9965"
+           sodipodi:nodetypes="cc" />
+        <path
+           d="M 636.20826,318.99143 H 587.55019"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path10952"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.6667px;line-height:1;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#000000;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+         x="501.44476"
+         y="287.2471"
+         id="text7"><tspan
+           sodipodi:role="line"
+           id="tspan7"
+           x="501.44476"
+           y="287.2471"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.6667px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000">C</tspan></text>
+    </g>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-size:42.6667px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#000000;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+     x="220.01106"
+     y="29.26939"
+     id="text1"><tspan
+       sodipodi:role="line"
+       id="tspan1"
+       x="220.01106"
+       y="29.26939"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.6667px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman,  Bold';fill:#000000">X<tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.6667px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman,  Bold';baseline-shift:sub;fill:#000000"
+   id="tspan2">box</tspan></tspan></text>
+  <g
+     id="g2"
+     transform="translate(-4.5776375e-8,0.38444157)">
+    <path
+       d="M 209.96174,27.67431 V 64.0398"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path11970" />
+    <path
+       d="m 210.4668,45.85706 c 4.04062,0 160.61426,0 160.61426,0"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+       id="path11972" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-size:42.6667px;line-height:1;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#000000;stroke-width:1.8;stroke-linejoin:round;paint-order:fill markers stroke"
+     x="66.010559"
+     y="364.72409"
+     id="text4"><tspan
+       sodipodi:role="line"
+       id="tspan4"
+       x="66.010559"
+       y="364.72409"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.6667px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman,  Bold';fill:#000000">X<tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.6667px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman,  Bold';baseline-shift:sub;fill:#000000"
+   id="tspan3">mass</tspan></tspan></text>
+  <g
+     transform="matrix(-1,0,0,1,654.83749,168.28053)"
+     id="g13151">
+    <path
+       d="m 450.44678,140.80868 v 36.36549"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path13153" />
+    <path
+       d="m 450.95184,158.99143 c 4.04062,0 164.65486,0 164.65486,0"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+       id="path13155" />
+  </g>
+</svg>
